@@ -21,7 +21,11 @@ export default function Home() {
         <div class="box">
           <div class="tag" id="about">ABOUT</div>
           <div class="content">
-            <div>I am a frontend engineer who builds fast and light web experiences from Columbus, Ohio. I have ~3 years of experience with building web apps, ~1 year with <a href="https://deno.land">Deno</a> and TypeScript, and ~10 years of experience with HTML and CSS (technically - my dad taught me early, but I gave it up for a while). If you are looking to hire a frontend engineer, please contact me using a contact channel below!</div>
+            <div>
+              I am a frontend engineer who builds fast and light web experiences in Columbus, Ohio.
+              I have ~3 years of experience with building web apps, ~1 year with <a href="https://deno.land">Deno</a> and TypeScript, and I've been learning HTML and CSS since about 2012.
+              If you are looking to hire a frontend engineer, please contact me using a contact channel below!
+            </div>
           </div>
         </div>
         <div class="box">
@@ -69,14 +73,14 @@ export default function Home() {
           </div>
         </div>
         <div class="box">
-          <div class="tag" id="minifesto">MINIFESTO</div>
+          <div class="tag" id="fast-and-light">FAST AND LIGHT</div>
           <div class="content">
             I believe that software should be open and free, but also lightweight.
             While it's not necessary with speeds of 500+mbps and terabytes of storage on average nowadays, i think it's still necessary to strive for fast and light.
             Most software takes advantage of the massive amounts of resources, and there's good reason for that - games, movies, etc. are getting heavier because they're getting better.
             But for software that could be light, why do we write it to be heavy just because we can?
             I think, at the very least, that writing the best code you can in the fastest and lightest way possible is a fun challenge.
-            I propose that the new era of the web should be as light as possible. This is the software engineer's <a href="http://minifesto.org/">minifesto</a>.
+            I propose that the new era of the web should be as light as possible. This is the software engineer's "<a href="http://minifesto.org/">minifesto</a>."
           </div>
         </div>
         <div class="box">
