@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="title" content="Jordan Reger"/>
         <meta name="description" content="A frontend engineer that builds fast and light web experiences."/>
 
-        <link rel="stylesheet" href="/index.css" />
+        <link rel="stylesheet" href="./index.css" />
       </Head>
       <div class="header">
         <div class="title">Jordan Reger</div>
