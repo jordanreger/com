@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    background-color: #101010;
+}
+
+::selection {
+    color: #101010;
+    background-color: #c4c4c4;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 13fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "x";
+}
+
+.header {
+    grid-area: header;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    border-bottom: 1px solid #424242;
+}
+
+.header .title {
+    font-family: Space Grotesk;
+    font-size: 2em;
+    color: #c4c4c4;
+
+    position: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1em;
+}
+
+.header .github {
+    font-family: Space Mono;
+    font-size: 1.5em;
+    color: #696969;
+
+    position: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.25em;
+
+    cursor: pointer;
+}
+
+.header .github:hover {
+    color: #c4c4c4;
+
+    cursor: pointer;
+}
+
+.x {
+    grid-area: x;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    padding-bottom: 0.5em;
+}
+
+.x .box {
+    width: calc(100% - 6em);
+    height: max-content;
+
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid #424242;
+    border-radius: 0.5vh;
+}
+
+.x .box .tag {
+    font-family: Space Mono;
+    color: #696969;
+    font-size: 1em;
+}
+
+.x .box .content {
+    font-family: Inter;
+    color: #c4c4c4;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.x .box .content a {
+    font-family: Space Mono;
+    color: #ffcf96;
+}
+
+.x .box .content a:hover {
+    text-decoration: underline;
+}
