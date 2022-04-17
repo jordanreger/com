@@ -86,7 +86,7 @@ export default function Home() {
         <div class="box">
           <div class="tag" id="source">SOURCE</div>
           <div class="content">
-            View the source on <a href="https://git.sr.ht/~jordanreger/com">Sourcehut</a> and eventually Github (once I figure out a decent mirroring technique).
+            View the source on <a href="https://sr.ht/~jordanreger/com">Sourcehut</a> and eventually Github (once I figure out a decent mirroring technique).
           </div>
         </div>
       </div>

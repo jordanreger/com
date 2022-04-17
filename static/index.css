@@ -62,7 +62,7 @@ main {
 
 @media only screen and (min-width: 1200px) {
     .x .box {
-        width: calc(35% - 10vh);
+        width: calc(40% - 10vh);
     }
 
     .header .title {
