@@ -40,6 +40,10 @@ export default function Home() {
             Sourcehut — <a href="https://sr.ht/~jordanreger">sr.ht/~jordanreger</a>
             <br/>
             Dribbble — <a href="https://dribbble.com/jordanreger">dribbble.com/jordanreger</a>
+            <br/>
+            Mastodon — <a href="https://indieweb.social/@jr">@jr</a>
+            <br/>
+            Twitter — <a href="https://twitter.com/jxreger">@jxreger</a>
           </div>
         </div>
         <div class="box">
