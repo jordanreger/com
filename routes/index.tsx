@@ -22,9 +22,9 @@ export default function Home() {
           <div class="tag" id="about">ABOUT</div>
           <div class="content">
             <div>
-              I am a frontend engineer who builds fast and light web experiences in Columbus, Ohio.
-              I have ~3 years of experience with building web apps, ~1 year with <a href="https://deno.land">Deno</a> and TypeScript, and I've been learning HTML and CSS since about 2012.
-              If you are looking to hire a frontend engineer, please contact me using a contact channel below!
+              I am a frontend engineer and a storm spotter.
+              I've been writing software for 3 years and I've been tracking storms for less than a year.
+              If you'd like to chat, reach out through one of my contact channels below.
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
             <br/>
             Dribbble — <a href="https://dribbble.com/jordanreger">dribbble.com/jordanreger</a>
             <br/>
-            Mastodon — <a href="https://indieweb.social/@jr">@jr</a>
+            Mastodon — <a href="https://indieweb.social/@jr">jr@indieweb.social</a>
             <br/>
             Twitter — <a href="https://twitter.com/jxreger">@jxreger</a>
           </div>
@@ -74,17 +74,6 @@ export default function Home() {
             <a href="https://deno.com/deploy">Deno Deploy</a> — how I host my sites
             <br/>
             <a href="https://marketplace.visualstudio.com/items?itemName=anotherglitchinthematrix.monochrome">monochrome</a> — my VSCode theme
-          </div>
-        </div>
-        <div class="box">
-          <div class="tag" id="fast-and-light">FAST AND LIGHT</div>
-          <div class="content">
-            I believe that software should be open and free, but also lightweight.
-            While it's not necessary with speeds of 500+mbps and terabytes of storage on average nowadays, i think it's still necessary to strive for fast and light.
-            Most software takes advantage of the massive amounts of resources, and there's good reason for that - games, movies, etc. are getting heavier because they're getting better.
-            But for software that could be light, why do we write it to be heavy just because we can?
-            I think, at the very least, that writing the best code you can in the fastest and lightest way possible is a fun challenge.
-            I propose that the new era of the web should be as light as possible. This is the software engineer's "<a href="http://minifesto.org/">minifesto</a>."
           </div>
         </div>
         <div class="box">
