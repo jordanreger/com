@@ -13,17 +13,24 @@ export default function Home() {
       </Head>
       <div class="header">
         <div class="title">Jordan Reger</div>
-        <div class="github">
-          <a href="https://github.com/jordanreger">Github</a>
+        <div class="sourcehut">
+          <a href="https://sr.ht/~jordanreger">Sourcehut</a>
         </div>
       </div>
       <div class="x">
+      <div class="box">
+          <div class="tag" id="about">STATUS</div>
+          <div class="content">
+            <div>
+              playing Minecraft and <a href="https://sr.ht/~jordanreger/cc">writing code for it</a>.
+            </div>
+          </div>
+        </div>
         <div class="box">
           <div class="tag" id="about">ABOUT</div>
           <div class="content">
             <div>
-              I am a frontend engineer and a storm spotter.
-              I've been writing software for 3 years and I've been tracking storms for less than a year.
+              I write code and I'm learning how to chase storms.
               If you'd like to chat, reach out through one of my contact channels below.
             </div>
           </div>
@@ -35,9 +42,9 @@ export default function Home() {
             <br/>
             Discord — <a href="https://discord.com/invite/Zma3aV9Zdm">jordanreger#7891</a>
             <br/>
-            Github — <a href="https://github.com/jordanreger">github.com/jordanreger</a>
-            <br/>
             Sourcehut — <a href="https://sr.ht/~jordanreger">sr.ht/~jordanreger</a>
+            <br/>
+            Github — <a href="https://github.com/jordanreger">github.com/jordanreger</a>
             <br/>
             Dribbble — <a href="https://dribbble.com/jordanreger">dribbble.com/jordanreger</a>
             <br/>
@@ -49,19 +56,21 @@ export default function Home() {
         <div class="box">
           <div class="tag" id="projects">PROJECTS</div>
           <div class="content">
-            LTX — your one stop shop for everything space. [<a href="https://github.com/LTXland">Source</a>] [<a href="https://ltx.deno.dev">Website</a>]
+            <a href="https://sr.ht/~jordanreger/cc">cc</a> — computercraft scripts
             <br/>
-            crate — a fullstack web framework built with Deno! [<a href="https://github.com/jordanreger/crate">Source</a>] [<a href="https://crate.land">Website</a>]
+            <a href="https://ltx.deno.dev">LTX</a> — your one stop shop for everything space.
             <br/>
-            Deploy + Sourcehut — a build file to deploy from Sourcehut [<a href="https://man.sr.ht/~jordanreger/deno-deploy">Source</a>]
+            <a href="https://github.com/jordanreger/crate">crate</a> — a fullstack web framework built with Deno
             <br/>
-            xxv — a lightweight offline web app launcher [<a href="https://github.com/jordanreger/xxv">Source</a>] [<a href="https://xxv.network">Website</a>]
+            <a href="https://man.sr.ht/~jordanreger/deno-deploy">Deploy + Sourcehut</a> — a build file to deploy from Sourcehut
             <br/>
-            latt — a lit element router [<a href="https://github.com/jordanreger/latt">Source</a>]
+            <a href="https://github.com/jordanreger/xxv">xxv</a> — a lightweight offline web app launcher
             <br/>
-            stellarDrive — an experiment in web-based dashboard UI [<a href="https://github.com/jordanreger/stellarDrive">Source</a>]
+            <a href="https://github.com/jordanreger/latt">latt</a> — a lit element router
             <br/>
-            konst — a web-based console [<a href="https://github.com/jordanreger/konst">Source</a>] [<a href="https://konst.netlify.app">Website</a>]
+            <a href="https://github.com/jordanreger/stellarDrive">stellarDrive</a> — an experiment in web-based dashboard UI
+            <br/>
+            <a href="https://github.com/jordanreger/konst">konst</a> — a web-based console
           </div>
         </div>
         <div class="box">
@@ -74,12 +83,6 @@ export default function Home() {
             <a href="https://deno.com/deploy">Deno Deploy</a> — how I host my sites
             <br/>
             <a href="https://marketplace.visualstudio.com/items?itemName=anotherglitchinthematrix.monochrome">monochrome</a> — my VSCode theme
-          </div>
-        </div>
-        <div class="box">
-          <div class="tag" id="source">SOURCE</div>
-          <div class="content">
-            View the source on <a href="https://sr.ht/~jordanreger/com">Sourcehut</a> and eventually Github (once I figure out a decent mirroring technique).
           </div>
         </div>
       </div>
