@@ -22,7 +22,7 @@ export default function Home() {
           <div class="tag" id="about">STATUS</div>
           <div class="content">
             <div>
-              playing Minecraft and <a href="https://sr.ht/~jordanreger/cc">writing code for it</a>.
+              Waiting for Falcon Heavy to launch multiple times this year!
             </div>
           </div>
         </div>
