@@ -1,5 +1,7 @@
 /** @jsx h */
-import { h, Head } from "../client_deps.ts";
+import { h } from "preact";
+import { Head } from "$fresh/src/runtime/head.ts";
+import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
   return (
@@ -18,19 +20,11 @@ export default function Home() {
         </div>
       </div>
       <div class="x">
-      <div class="box">
-          <div class="tag" id="about">STATUS</div>
-          <div class="content">
-            <div>
-              Waiting for Falcon Heavy to launch multiple times this year!
-            </div>
-          </div>
-        </div>
         <div class="box">
           <div class="tag" id="about">ABOUT</div>
           <div class="content">
             <div>
-              I write code and I'm learning how to chase storms.
+              I write code, ride bikes, make coffee, and I'm currently learning Swedish.
               If you'd like to chat, reach out through one of my contact channels below.
             </div>
           </div>
@@ -45,10 +39,6 @@ export default function Home() {
             Sourcehut — <a href="https://sr.ht/~jordanreger">sr.ht/~jordanreger</a>
             <br/>
             Github — <a href="https://github.com/jordanreger">github.com/jordanreger</a>
-            <br/>
-            Dribbble — <a href="https://dribbble.com/jordanreger">dribbble.com/jordanreger</a>
-            <br/>
-            Mastodon — <a href="https://indieweb.social/@jr">jr@indieweb.social</a>
             <br/>
             Twitter — <a href="https://twitter.com/jxreger">@jxreger</a>
           </div>
@@ -71,18 +61,6 @@ export default function Home() {
             <a href="https://github.com/jordanreger/stellarDrive">stellarDrive</a> — an experiment in web-based dashboard UI
             <br/>
             <a href="https://github.com/jordanreger/konst">konst</a> — a web-based console
-          </div>
-        </div>
-        <div class="box">
-          <div class="tag" id="stack">STACK</div>
-          <div class="content">
-            <a href="https://elementary.io">elementary</a> — my linux distro of choice
-            <br/>
-            <a href="https://deno.land">Deno</a> — my favorite JS/TS runtime
-            <br/>
-            <a href="https://deno.com/deploy">Deno Deploy</a> — how I host my sites
-            <br/>
-            <a href="https://marketplace.visualstudio.com/items?itemName=anotherglitchinthematrix.monochrome">monochrome</a> — my VSCode theme
           </div>
         </div>
       </div>

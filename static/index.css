@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
-    background-color: #000;
+    background-color: #1c3366;
 }
 
 ::selection {
-    color: #000;
-    background-color: #c4c4c4;
+    color: #1c3366;
+    background-color: #ffe438;
 }
 
 a {
@@ -82,13 +82,13 @@ main {
     width: 100%;
     height: 100%;
 
-    border-bottom: 1px solid #424242;
+    border-bottom: 1px solid #ffe438;
 }
 
 .header .title {
     font-family: Inter;
     font-size: 2.5vh;
-    color: #c4c4c4;
+    color: #ffe438;
 
     position: inherit;
     top: 50%;
@@ -98,7 +98,7 @@ main {
 .header .sourcehut {
     font-family: Inter;
     font-size: 1.75vh;
-    color: #696969;
+    color: #ffe438;
 
     position: inherit;
     top: 50%;
@@ -108,8 +108,7 @@ main {
 }
 
 .header .sourcehut:hover {
-    color: #c4c4c4;
-
+    color: #ffd000;
     cursor: pointer;
 }
 
@@ -131,7 +130,7 @@ main {
 
     margin-top: 3vh;
     padding: 2vh;
-    border: 1px solid #424242;
+    border: 1px solid #ffe438;
     border-radius: 0.5vh;
 }
 
@@ -141,13 +140,13 @@ main {
 
 .x .box .tag {
     font-family: Inter;
-    color: #696969;
+    color: #ffe438;
     font-size: 1.5vh;
 }
 
 .x .box .content {
     font-family: Inter;
-    color: #c4c4c4;
+    color: #ffe438;
     font-size: 2vh;
     margin-top: 1vh;
     max-width: 100%;
@@ -156,9 +155,10 @@ main {
 
 .x .box .content a {
     font-family: Inter;
-    color: #696969;
+    color: #ffe438;
+    text-decoration: underline;
 }
 
 .x .box .content a:hover {
-    text-decoration: underline;
+    color: #ffd000;
 }
