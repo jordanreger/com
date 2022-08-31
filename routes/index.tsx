@@ -1,7 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
 import { Head } from "$fresh/src/runtime/head.ts";
-import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
   return (
