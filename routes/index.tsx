@@ -1,4 +1,4 @@
-import { Head } from "$fresh/src/runtime/head.ts";
+import { Head } from "$fresh/runtime.ts";
 
 export default function Home() {
   return (
