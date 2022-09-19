@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { Head } from "$fresh/src/runtime/head.ts";
 
 export default function Home() {
