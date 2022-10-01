@@ -1,6 +1,8 @@
-/** @jsx h */
+/** jsx h */
+
 import { h } from "preact";
 import { Head } from "$fresh/runtime.ts";
+import Header from "../islands/Header.tsx";
 
 export default function Home() {
   return (
@@ -8,58 +10,29 @@ export default function Home() {
       <Head>
         <title>Jordan Reger</title>
         <meta name="title" content="Jordan Reger"/>
-        <meta name="description" content="A frontend engineer that builds fast and light web experiences."/>
-
+        <meta name="description" content="Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish."/>
         <link rel="stylesheet" href="./index.css" />
       </Head>
       <div class="header">
-        <div class="title">Jordan Reger</div>
-        <div class="sourcehut">
-          <a href="https://sr.ht/~jordanreger">Sourcehut</a>
-        </div>
+        <Header active="/"></Header>
       </div>
       <div class="x">
-        <div class="box">
-          <div class="tag" id="about">ABOUT</div>
+        <div class="box" id="cover">
           <div class="content">
-            <div>
-              I write code, ride bikes, make coffee, and I'm currently learning Swedish.
-              If you'd like to chat, reach out through one of my contact channels below.
+            <div class="title">Jordan Reger</div>
+            <div class="description">Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish. Yes, this site is bare right now - it won't remain that way for long.</div>
+            <br/>
+            <div class="socials">
+              <a href="https://twitter.com/jxreger">Twitter</a> / <a href="https://youtube.com/jordanreger">Youtube</a> / <a href="mailto:jordanreger@gmail.com">Email</a>
             </div>
           </div>
         </div>
         <div class="box">
-          <div class="tag" id="contact">CONTACT</div>
           <div class="content">
-            Email — <a href="mailto:jordanreger@gmail.com">jordanreger@gmail.com</a>
-            <br/>
-            Discord — <a href="https://discord.com/invite/Zma3aV9Zdm">jordanreger#7891</a>
-            <br/>
-            Sourcehut — <a href="https://sr.ht/~jordanreger">sr.ht/~jordanreger</a>
-            <br/>
-            Github — <a href="https://github.com/jordanreger">github.com/jordanreger</a>
-            <br/>
-            Twitter — <a href="https://twitter.com/jxreger">@jxreger</a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="tag" id="projects">PROJECTS</div>
-          <div class="content">
-            <a href="https://sr.ht/~jordanreger/cc">cc</a> — computercraft scripts
-            <br/>
-            <a href="https://ltx.deno.dev">LTX</a> — your one stop shop for everything space.
-            <br/>
-            <a href="https://github.com/jordanreger/crate">crate</a> — a fullstack web framework built with Deno
-            <br/>
-            <a href="https://man.sr.ht/~jordanreger/deno-deploy">Deploy + Sourcehut</a> — a build file to deploy from Sourcehut
-            <br/>
-            <a href="https://github.com/jordanreger/xxv">xxv</a> — a lightweight offline web app launcher
-            <br/>
-            <a href="https://github.com/jordanreger/latt">latt</a> — a lit element router
-            <br/>
-            <a href="https://github.com/jordanreger/stellarDrive">stellarDrive</a> — an experiment in web-based dashboard UI
-            <br/>
-            <a href="https://github.com/jordanreger/konst">konst</a> — a web-based console
+            <div class="tag">SOURCE</div>
+            <div class="body">
+              View the source at <a href="https://sr.ht/~jordanreger/com">sr.ht/~jordanreger/com</a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Emoji:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-    background-color: #1c3366;
+    background-color: #101010;
 }
 
 ::selection {
-    color: #1c3366;
-    background-color: #ffe438;
+    color: #101010;
+    background-color: #ffe551;
 }
 
 a {
@@ -37,40 +37,55 @@ main {
         width: calc(100% - 10vh);
     }
 
-    .header .title {
+    .header .logo {
+        height: 3.5vh;
+        right: 3vh;
+    }
+
+    .header .links {
         left: 3vh;
     }
 
-    .header .sourcehut {
-        right: 3vh;
+    .header .links > a {
+        font-size: 1.6vh;
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
     .x .box {
-        width: calc(75% - 10vh);
+        width: calc(75% - 5vh);
     }
 
-    .header .title {
+    .header .logo {
+        height: 4vh;
+        right: 5vh;
+    }
+
+    .header .links {
         left: 5vh;
     }
 
-    .header .sourcehut {
-        right: 5vh;
+    .header .links > a {
+        font-size: 2vh;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .x .box {
-        width: calc(40% - 10vh);
+        width: calc(65% - 10vh);
     }
 
-    .header .title {
+    .header .logo {
+        height: 4vh;
+        right: 5vh;
+    }
+
+    .header .links {
         left: 5vh;
     }
 
-    .header .sourcehut {
-        right: 5vh;
+    .header .links > a {
+        font-size: 2vh;
     }
 }
 
@@ -82,34 +97,55 @@ main {
     width: 100%;
     height: 100%;
 
-    border-bottom: 1px solid #ffe438;
+    border-bottom: 1px solid #424242;
 }
 
-.header .title {
-    font-family: Inter;
-    font-size: 2.5vh;
-    color: #ffe438;
-
+.header .logo {
     position: inherit;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.header .sourcehut {
-    font-family: Inter;
-    font-size: 1.75vh;
-    color: #ffe438;
-
+.header .links {
     position: inherit;
     top: 50%;
     transform: translateY(-50%);
 
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+}
+
+.header .links > a {
+    color: #696969;
+    font-family: Space Mono;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+
+    border: 1px solid #696969;
+    border-radius: 2vh;
+
     cursor: pointer;
 }
 
-.header .sourcehut:hover {
-    color: #ffd000;
-    cursor: pointer;
+.header .links > .active {
+    color: #101010;
+    background-color: #ffe551;
+    border: 1px solid transparent;
+
+    pointer-events: none;
+}
+
+.header .links > a:hover {
+    color: #f0f0f0;
+    background-color: #212121;
+}
+
+.header .links > a .arrow {
+    font-family: Noto Emoji;
 }
 
 .x {
@@ -128,9 +164,11 @@ main {
     transform: translateX(-50%);
     height: max-content;
 
+    display: inline-block;
+
     margin-top: 3vh;
     padding: 2vh;
-    border: 1px solid #ffe438;
+    border: 1px solid #424242;
     border-radius: 0.5vh;
 }
 
@@ -139,26 +177,64 @@ main {
 }
 
 .x .box .tag {
-    font-family: Inter;
-    color: #ffe438;
+    font-family: Space Mono;
+    color: #696969;
     font-size: 1.5vh;
 }
 
-.x .box .content {
+.x .box .content .me {
+    width: 100%;
+}
+
+.x .box .content .body {
     font-family: Inter;
-    color: #ffe438;
+    color: #c4c4c4;
     font-size: 2vh;
     margin-top: 1vh;
     max-width: 100%;
     overflow-wrap: break-word;
 }
 
-.x .box .content a {
-    font-family: Inter;
-    color: #ffe438;
+.x .box .content .body a {
     text-decoration: underline;
 }
 
-.x .box .content a:hover {
-    color: #ffd000;
+.x .box .content .body a:hover {
+    color: #ffe551;
+}
+
+.x .box .content .title {
+    font-family: Space Grotesk;
+    font-weight: 800;
+    color: #f0f0f0;
+    font-size: 10vh;
+
+    text-align: center;
+}
+
+.x .box .content .description {
+    font-family: Inter;
+    font-size: 2vh;
+    color: #c4c4c4;
+
+    text-align: center;
+}
+
+.x .box .content .socials {
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.x .box .content .socials a {
+    font-family: Space Mono;
+    font-size: 1.75vh;
+    color: #ffe551;
+}
+
+.x .box .content .socials a:hover {
+    color: #f0f0f0;
+}
+
+.x .box .content .socials a:not(:last-child) {
+    margin-right: 1vw;
 }
