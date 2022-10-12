@@ -29,7 +29,6 @@ export default function Header(props: { active: string }) {
       <Head>
         <link rel="stylesheet" href="./index.css" />
       </Head>
-      <img src="./logo.svg" alt="logo" class="logo" />
       <div class="links">
         {items.map((item) => (
           <a href={item.href} class={props.active == item.href ? "active" : ""}>
