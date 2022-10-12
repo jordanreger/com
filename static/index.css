@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Emoji:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;500;600;700&display=swap');
 
 html {
-    background-color: #101010;
+    background-color: #f0f0f0;
+    font-family: monospace;
 }
 
 ::selection {
-    color: #101010;
     background-color: #ffe551;
 }
 
@@ -25,7 +25,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 13fr;
     grid-auto-columns: 1fr;
-    gap: 0px 1em;
+    gap: 0 1em;
     grid-auto-flow: row;
     grid-template-areas:
         "header"
@@ -66,7 +66,7 @@ main {
     }
 
     .header .links > a {
-        font-size: 2vh;
+        font-size: 1.75vh;
     }
 }
 
@@ -85,7 +85,7 @@ main {
     }
 
     .header .links > a {
-        font-size: 2vh;
+        font-size: 1.8vh;
     }
 }
 
@@ -97,7 +97,7 @@ main {
     width: 100%;
     height: 100%;
 
-    border-bottom: 1px solid #424242;
+    border-bottom: 1px solid #000;
 }
 
 .header .logo {
@@ -117,31 +117,24 @@ main {
 }
 
 .header .links > a {
-    color: #696969;
-    font-family: Space Mono;
+    padding: 0.5vh 2vw;
 
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh;
-
-    border: 1px solid #696969;
+    border: 1px solid #000;
     border-radius: 2vh;
 
     cursor: pointer;
 }
 
 .header .links > .active {
-    color: #101010;
+    color: #000;
     background-color: #ffe551;
-    border: 1px solid transparent;
 
     pointer-events: none;
 }
 
 .header .links > a:hover {
     color: #f0f0f0;
-    background-color: #212121;
+    background-color: #000;
 }
 
 .header .links > a .arrow {
@@ -166,9 +159,8 @@ main {
 
     display: inline-block;
 
-    margin-top: 3vh;
-    padding: 2vh;
-    border: 1px solid #424242;
+    margin-top: 1vh;
+    padding: 1vh;
     border-radius: 0.5vh;
 }
 
@@ -177,9 +169,7 @@ main {
 }
 
 .x .box .tag {
-    font-family: Space Mono;
-    color: #696969;
-    font-size: 1.5vh;
+    font-size: 1.75vh;
 }
 
 .x .box .content .me {
@@ -187,9 +177,7 @@ main {
 }
 
 .x .box .content .body {
-    font-family: Inter;
-    color: #c4c4c4;
-    font-size: 2vh;
+    font-size: 1.5vh;
     margin-top: 1vh;
     max-width: 100%;
     overflow-wrap: break-word;
@@ -200,41 +188,42 @@ main {
 }
 
 .x .box .content .body a:hover {
-    color: #ffe551;
+    color: #000;
 }
 
 .x .box .content .title {
-    font-family: Space Grotesk;
-    font-weight: 800;
-    color: #f0f0f0;
     font-size: 10vh;
 
-    text-align: center;
+    text-align: left;
 }
 
 .x .box .content .description {
-    font-family: Inter;
-    font-size: 2vh;
-    color: #c4c4c4;
+    font-size: 1.5vh;
 
-    text-align: center;
+    text-align: left;
 }
 
 .x .box .content .socials {
     margin-top: 2vh;
-    text-align: center;
+    text-align: left;
 }
 
 .x .box .content .socials a {
-    font-family: Space Mono;
-    font-size: 1.75vh;
-    color: #ffe551;
+    font-size: 1.5vh;
+    color: #424242;
 }
 
 .x .box .content .socials a:hover {
-    color: #f0f0f0;
+    color: #000;
 }
 
-.x .box .content .socials a:not(:last-child) {
-    margin-right: 1vw;
+.x .source {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3vh;
+}
+
+.x .source a {
+    text-decoration: underline;
 }

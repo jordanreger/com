@@ -13,10 +13,10 @@ export default function Header(props: { active: string }) {
       name: "ABOUT",
       href: "/about",
     },
-    /*{
-      name: "CONTACT",
-      href: "/contact",
-    },*/
+    {
+      name: "PROJECTS",
+      href: "/projects",
+    },
     {
       name: "SOURCEHUT",
       href: "https://sr.ht/~jordanreger",
