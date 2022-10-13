@@ -206,6 +206,8 @@ main {
 .x .box .content .socials {
     margin-top: 2vh;
     text-align: left;
+    font-size: 1.5vh;
+    color: #424242;
 }
 
 .x .box .content .socials a {
