@@ -4,8 +4,9 @@ sources:
 secrets:
     - c7771c68-4b15-43a2-945b-a544bd48c3a6
 tasks:
-    - push: |
+    - preflight-check: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
         ssh -o StrictHostKeyChecking=no git@github.com
+    - push: |
         git push github main
