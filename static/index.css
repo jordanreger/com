@@ -224,6 +224,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     bottom: 3vh;
+    font-size: 1.5vh;
 }
 
 .x .source a {
