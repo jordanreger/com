@@ -7,6 +7,4 @@ tasks:
     - preflight-check: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
-        ssh -o StrictHostKeyChecking=no git@github.com
-    - push: |
         git push github main
