@@ -7,4 +7,5 @@ tasks:
     - push: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
+        ssh -o StrictHostKeyChecking=no git@github.com
         git push github main
