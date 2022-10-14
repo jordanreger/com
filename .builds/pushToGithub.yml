@@ -1,0 +1,10 @@
+image: ubuntu/20.04
+sources:
+    - https://git.sr.ht/~jordanreger/com
+secrets:
+    - c7771c68-4b15-43a2-945b-a544bd48c3a6
+tasks:
+    - push: |
+        cd com
+        git remote add github git@github.com:jordanreger/com.git
+        git push github main
