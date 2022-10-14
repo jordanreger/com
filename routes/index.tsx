@@ -30,8 +30,8 @@ export default function Home() {
               and person attempting to learn Swedish.
             </div>
             <div class="socials">
-              <a href="https://twitter.com/jxreger">Twitter</a> /
-              <a href="https://youtube.com/jordanreger">Youtube</a> /
+              <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
+              <a href="https://youtube.com/jordanreger">Youtube</a> /{" "}
               <a href="mailto:jordanreger@gmail.com">Email</a>
             </div>
           </div>
