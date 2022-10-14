@@ -7,4 +7,5 @@ tasks:
     - preflight-check: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
+        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         git push github main
