@@ -4,7 +4,7 @@ sources:
 secrets:
     - c7771c68-4b15-43a2-945b-a544bd48c3a6
 tasks:
-    - preflight-check: |
+    - mirror-to-github: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
