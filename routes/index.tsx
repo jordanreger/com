@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="stylesheet" href="./index.css" />
         <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
       </Head>
-      <div class="header">
+      <div>
         <Header active="/"></Header>
       </div>
       <div class="x">
@@ -31,7 +31,8 @@ export default function Home() {
             </div>
             <div class="socials">
               <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
-              <a href="https://youtube.com/jordanreger">Youtube</a> /{" "}
+              <a href="https://youtube.com/jordanreger">YouTube</a> /{" "}
+              <a href="https://linkedin.com/in/jordanreger">LinkedIn</a> /{" "}
               <a href="mailto:jordanreger@gmail.com">Email</a>
             </div>
           </div>

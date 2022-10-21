@@ -14,6 +14,10 @@ export default function Header(props: { active: string }) {
       href: "/about",
     },
     {
+      name: "BLOG",
+      href: "/blog",
+    },
+    {
       name: "PROJECTS",
       href: "/projects",
     },
