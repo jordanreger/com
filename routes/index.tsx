@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="stylesheet" href="./index.css" />
         <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
       </Head>
-      <div>
+      <div class="header">
         <Header active="/"></Header>
       </div>
       <div class="x">
