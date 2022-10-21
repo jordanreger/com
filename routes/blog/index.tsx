@@ -23,7 +23,17 @@ export default function Home() {
       <div class="x">
         <div class="box" id="cover">
           <div class="content">
-            This is my blog.
+            <div class="body">
+              This is my blog, containing many (probably useless) topics.
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <div class="tag"><u><a href="/blog/glass">Becoming a Glasshole</a></u> &#8212; {new Date("2022-10-20T21:28:00.000-04:00").toString()}</div>
+            <div class="body">
+              Why I bought a Google Glass in 2022...
+            </div>
           </div>
         </div>
       </div>

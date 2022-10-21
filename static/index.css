@@ -43,7 +43,8 @@ main {
     }
 
     .header .links {
-        left: 3vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .header .links > a {
@@ -62,7 +63,8 @@ main {
     }
 
     .header .links {
-        left: 5vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .header .links > a {
@@ -81,7 +83,8 @@ main {
     }
 
     .header .links {
-        left: 5vh;
+        left: 1vw;
+        transform: translate(0, -50%);
     }
 
     .header .links > a {
@@ -108,8 +111,8 @@ main {
 
 .header .links {
     position: inherit;
+    width: max-content;
     top: 50%;
-    transform: translateY(-50%);
 
     display: flex;
     flex-direction: row;
@@ -192,7 +195,7 @@ main {
 }
 
 .x .box .content .title {
-    font-size: 10vh;
+    font-size: 7.5vh;
 
     text-align: left;
 }
