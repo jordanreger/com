@@ -3,6 +3,7 @@
 html {
     background-color: #f0f0f0;
     font-family: monospace;
+    overflow-x: hidden;
 }
 
 ::selection {
@@ -12,12 +13,6 @@ html {
 a {
     color: inherit;
     text-decoration: inherit;
-}
-
-code {
-    background-color: #e0e0e0;
-    padding: 0.5vw;
-    border: 1px solid #000;
 }
 
 main {
@@ -155,7 +150,7 @@ main {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
 
     margin-bottom: 0.5vh;
 }
