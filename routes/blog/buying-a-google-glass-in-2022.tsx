@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>Becoming a Glasshole - Jordan Reger</title>
-        <meta name="title" content="Blog - Jordan Reger" />
+        <title>Buying a Google Glass in 2022 - Jordan Reger</title>
+        <meta name="title" content="Buying a Google Glass in 2022 - Jordan Reger" />
         <meta
           name="description"
           content="Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish."
@@ -23,11 +23,11 @@ export default function Home() {
       <div class="x">
         <div class="box" id="cover">
           <div class="content">
-            <div class="title">Becoming a Glasshole</div>
+            <div class="title">Buying a Google Glass in 2022</div>
             <br />
             <div class="tag">{new Date("2022-10-20T21:28:00.000-04:00").toString()}</div>
             <div class="body">
-              Why I bought a Google Glass in 2022...
+              Yes, I bought a Google Glass in 2022...
             </div>
           </div>
         </div>
@@ -60,10 +60,12 @@ export default function Home() {
               As I mentioned in the <a href="#introduction">intro</a>, these things are super nostalgic.
               I remember being 9 or 10 doing the little head flick to "wake up glass," and seeing the time.
               Also, despite almost the entire internet's opinion, I think they look awesome.
+              As mentioned in my <a href="/about">about</a> section, I am a software developer in training.
+              In fact, I'm studying Java (for now). 
+              Google Glass gives me a perfect chance to learn the ins and outs of Java on a fun, interactive level.
+              Also, I love "weird" form factors when it comes to technology - cyberdecks, glasses, tiny computers, etc.
+              Google Glass is the pinnacle of weird-form technology in my opinion!
             </div>
-            <br/>
-            <br/>
-            <div class="tag" id="#tbd">To be continued...</div>
           </div>
         </div>
       </div>

@@ -30,9 +30,9 @@ export default function Home() {
         </div>
         <div class="box">
           <div class="content">
-            <div class="tag"><u><a href="/blog/glass">Becoming a Glasshole</a></u> &#8212; {new Date("2022-10-20T21:28:00.000-04:00").toString()}</div>
+            <div class="tag"><u><a href="/blog/buying-a-google-glass-in-2022">Buying a Google Glass in 2022</a></u> &#8212; {new Date("2022-10-20T21:28:00.000-04:00").toString()}</div>
             <div class="body">
-              Why I bought a Google Glass in 2022...
+              Yes, I bought a Google Glass in 2022...
             </div>
           </div>
         </div>
