@@ -173,7 +173,8 @@ main {
 }
 
 .x .box .tag {
-    font-size: 1.75vh;
+    font-size: 2vh;
+    font-weight: 600;
 }
 
 .x .box .content .me {

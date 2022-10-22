@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div class="box">
           <div class="content">
-            <div class="tag"><u><a href="/blog/glass-setup">Google Glass Setup (XE24)</a></u> &#8212; {new Date("2022-10-21T22:00:00.000-04:00").toString()}</div>
+            <div class="tag"><u><a href="/blog/glass-setup">Google Glass Setup (XE24)</a></u></div>
             <div class="body">
               How to setup a Google Glass for XE24.
             </div>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <div class="box">
           <div class="content">
-            <div class="tag"><u><a href="/blog/buying-a-google-glass-in-2022">Buying a Google Glass in 2022</a></u> &#8212; {new Date("2022-10-20T21:28:00.000-04:00").toString()}</div>
+            <div class="tag"><u><a href="/blog/buying-a-google-glass-in-2022">Buying a Google Glass in 2022</a></u></div>
             <div class="body">
               Yes, I bought a Google Glass in 2022...
             </div>
