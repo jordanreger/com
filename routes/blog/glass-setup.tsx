@@ -70,13 +70,11 @@ export default function Home() {
               Once you've done so, edit the driver ("android_winusb.inf") to include this under both NTx86 and NTamd64:
               <br/>
               <br/>
-              <pre>
                 ;Google Glass
                 <br/>
                 %SingleAdbInterface%    = USB_Install, USB\VID_18D1&PID_9001
                 <br/>
                 %CompositeAdbInterface% = USB_Install, USB\VID_18D1&PID_9001&MI_01
-              </pre>
               <br/>
               <br/>
               Once you've done that, save it.
@@ -144,10 +142,7 @@ export default function Home() {
               setprop persist.sys.timezone "America/New_York" # find your timezone with <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">this list</a>
               <br/>
               reboot
-              <br/>
-              <br/>
             </div>
-            <br/>
             <br/>
             <div class="tag" id="done">You're Done!</div>
             <div class="body">
