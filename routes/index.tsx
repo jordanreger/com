@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             <div class="socials">
               <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
-              <a href="https://indieweb.social/@jr">Mastodon</a> /{" "}
+              <a href="https://indieweb.social/@jr" rel="me">Mastodon</a> /{" "}
               <a href="https://youtube.com/jordanreger">YouTube</a> /{" "}
               <a href="https://linkedin.com/in/jordanreger">LinkedIn</a> /{" "}
               <a href="mailto:jordanreger@gmail.com">Email</a>
