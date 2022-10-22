@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="title" content="Jordan Reger" />
         <meta
           name="description"
-          content="Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish."
+          content="Software developer in training"
         />
         <link rel="stylesheet" href="./index.css" />
         <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
@@ -26,11 +26,12 @@ export default function Home() {
             <div class="title">Jordan Reger</div>
             <br />
             <div class="description">
-              Software developer in training, mountain biker, weather enthusiast
-              and person attempting to learn Swedish.
+              I am a software developer in training. If you'd like to talk about urban planning, rockets, mountain bikes, Swedish, weather, software, Google Glass, dystopian sci-fi books and movies or something else, contact me below!
+              If you find a social media account with my name on it *not* listed below, chances are it's not mine or I don't use it anymore.
             </div>
             <div class="socials">
               <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
+              <a href="https://indieweb.social/@jr">Mastodon</a> /{" "}
               <a href="https://youtube.com/jordanreger">YouTube</a> /{" "}
               <a href="https://linkedin.com/in/jordanreger">LinkedIn</a> /{" "}
               <a href="mailto:jordanreger@gmail.com">Email</a>

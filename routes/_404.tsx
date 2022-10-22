@@ -9,11 +9,11 @@ export default function NotFoundPage({ url }: UnknownPageProps) {
     return (
         <main>
           <Head>
-            <title>Blog - Jordan Reger</title>
-            <meta name="title" content="Blog - Jordan Reger" />
+            <title>404 - Jordan Reger</title>
+            <meta name="title" content="404 - Jordan Reger" />
             <meta
               name="description"
-              content="Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish."
+              content="Have you tried turning it off and on again?"
             />
             <link rel="stylesheet" href="../index.css" />
             <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />

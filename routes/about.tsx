@@ -11,7 +11,7 @@ export default function About() {
                 <title>About - Jordan Reger</title>
                 <meta name="title" content="About - Jordan Reger"/>
                 <meta name="description"
-                      content="Software developer in training, mountain biker, weather enthusiast and person attempting to learn Swedish."/>
+                      content="Software developer in training"/>
                 <link rel="stylesheet" href="./index.css"/>
                 <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml"/>
             </Head>
