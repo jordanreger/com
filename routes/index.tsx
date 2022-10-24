@@ -30,8 +30,8 @@ export default function Home() {
               If you find a social media account with my name on it *not* listed below, chances are it's not mine or I don't use it anymore.
             </div>
             <div class="socials">
-              <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
               <a href="https://indieweb.social/@jr" rel="me">Mastodon</a> /{" "}
+              <a href="https://twitter.com/jxreger">Twitter</a> /{" "}
               <a href="https://youtube.com/jordanreger">YouTube</a> /{" "}
               <a href="https://linkedin.com/in/jordanreger">LinkedIn</a> /{" "}
               <a href="mailto:jordanreger@gmail.com">Email</a>

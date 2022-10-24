@@ -28,6 +28,17 @@ export default function Projects() {
                     </div>
                     <div class="box">
                         <div class="content">
+                            <div class="tag">Glass</div>
+                            <div class="body">
+                            Glassware built for Google Glass XE24
+                                <br/>
+                                <br/>
+                                <a href="/blog/glass-setup">Glass Setup</a> / <a href="https://sr.ht/~jordanreger/glass">Sourcehut</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
                             <div class="tag">LTX/ITSLAUNCHTIME</div>
                             <div class="body">
                                 LTX and itslaunchtime were two projects that were essentially the same thing - a website to show people multiple views of a rocket launch all at once. Unfortunately, neither of them panned out very well - due to stress, scope creep, and just lack of usage, I ended production on both. This does not mean they will be dead forever...
