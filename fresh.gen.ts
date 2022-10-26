@@ -8,8 +8,9 @@ import * as $1 from "./routes/about.tsx";
 import * as $2 from "./routes/blog/buying-a-google-glass-in-2022.tsx";
 import * as $3 from "./routes/blog/glass-setup.tsx";
 import * as $4 from "./routes/blog/index.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/projects.tsx";
+import * as $5 from "./routes/blog/wgu-c176.tsx";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/projects.tsx";
 import * as $$0 from "./islands/Header.tsx";
 
 const manifest = {
@@ -19,8 +20,9 @@ const manifest = {
     "./routes/blog/buying-a-google-glass-in-2022.tsx": $2,
     "./routes/blog/glass-setup.tsx": $3,
     "./routes/blog/index.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/projects.tsx": $6,
+    "./routes/blog/wgu-c176.tsx": $5,
+    "./routes/index.tsx": $6,
+    "./routes/projects.tsx": $7,
   },
   islands: {
     "./islands/Header.tsx": $$0,
