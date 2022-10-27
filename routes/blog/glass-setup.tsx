@@ -70,11 +70,13 @@ export default function Home() {
               Once you've done so, edit the driver ("android_winusb.inf") to include this under both NTx86 and NTamd64:
               <br/>
               <br/>
+              <pre>
                 ;Google Glass
                 <br/>
                 %SingleAdbInterface%    = USB_Install, USB\VID_18D1&PID_9001
                 <br/>
                 %CompositeAdbInterface% = USB_Install, USB\VID_18D1&PID_9001&MI_01
+              </pre>
               <br/>
               <br/>
               Once you've done that, save it.
@@ -104,27 +106,29 @@ export default function Home() {
               While still in Fastboot mode (and still connected), run these commands:
               <br/>
               <br/>
-              fastboot oem unlock
-              <br/>
-              # this will prompt you to run it again to confirm
-              <br/>
-              fastboot oem unlock
-              <br/>
-              # cd into the folder with the img files
-              <br/>
-              fastboot flash:raw boot boot.img # MAKE SURE THIS IS THE ROOTED VERSION
-              <br/>
-              fastboot flash system system.img
-              <br/>
-              fastboot flash recovery recovery.img
-              <br/>
-              fastboot erase cache
-              <br/>
-              fastboot erase userdata
-              <br/>
-              fastboot oem lock
-              <br/>
-              fastboot reboot
+              <pre>
+                fastboot oem unlock
+                <br/>
+                # this will prompt you to run it again to confirm
+                <br/>
+                fastboot oem unlock
+                <br/>
+                # cd into the folder with the img files
+                <br/>
+                fastboot flash:raw boot boot.img # MAKE SURE THIS IS THE ROOTED VERSION
+                <br/>
+                fastboot flash system system.img
+                <br/>
+                fastboot flash recovery recovery.img
+                <br/>
+                fastboot erase cache
+                <br/>
+                fastboot erase userdata
+                <br/>
+                fastboot oem lock
+                <br/>
+                fastboot reboot
+              </pre>
               <br/>
               <br/>
               Once you've done this, you'll have installed XE24 on your Glass!
@@ -137,11 +141,13 @@ export default function Home() {
               To change the timezone, run these commands:
               <br/>
               <br/>
-              adb shell
-              <br/>
-              setprop persist.sys.timezone "America/New_York" # find your timezone with <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">this list</a>
-              <br/>
-              reboot
+              <pre>
+                adb shell
+                <br/>
+                setprop persist.sys.timezone "America/New_York" # find your timezone with <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">this list</a>
+                <br/>
+                reboot
+              </pre>
             </div>
             <br/>
             <div class="tag" id="done">You're Done!</div>
