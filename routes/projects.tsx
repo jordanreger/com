@@ -33,7 +33,7 @@ export default function Projects() {
                             Glassware built for Google Glass XE24
                                 <br/>
                                 <br/>
-                                <a href="/blog/glass-setup">Glass Setup</a> / <a href="https://sr.ht/~jordanreger/glass">Sourcehut</a>
+                                <a href="/glass">Glass page</a> / <a href="https://sr.ht/~jordanreger/glass">Sourcehut</a>
                             </div>
                         </div>
                     </div>
