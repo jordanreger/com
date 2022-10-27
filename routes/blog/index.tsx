@@ -30,14 +30,6 @@ export default function Home() {
         </div>
         <div class="box">
           <div class="content">
-            <div class="tag"><u><a href="/blog/wgu-c176">WGU C176 COMPTIA Project+ Study Guide</a></u></div>
-            <div class="body">
-              An incomprehensive study guide for WGU's C176 course, which covers COMPTIA's Project+ exam.
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="content">
             <div class="tag"><u><a href="/blog/glass-setup">Google Glass Setup (XE24)</a></u></div>
             <div class="body">
               How to setup a Google Glass for XE24.
