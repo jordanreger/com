@@ -1,9 +1,14 @@
-/// <reference no-default-lib="true" />
-/// <reference lib="dom" />
-/// <reference lib="dom.asynciterable" />
-/// <reference lib="deno.ns" />
-/// <reference lib="deno.unstable" />
+const App = {
+    routes: {
+        "/": "./pages/index.html",
+        "/glass": "./pages/glass.html",
 
-import { start } from "$fresh/server.ts";
-import manifest from "./fresh.gen.ts";
-await start(manifest);
+        /* resources */
+        "/logo.svg": "./static/logo.svg"
+    }
+}
+
+import Crate from "https://crate.land/mod";
+const crate = new Crate();
+
+crate.serve(App);
