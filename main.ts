@@ -1,10 +1,10 @@
 const App = {
     routes: {
-        "/": "./pages/index.html",
-        "/glass": "./pages/glass.html",
+        "/": "./com/pages/index.html",
+        "/glass": "./com/pages/glass.html",
 
         /* resources */
-        "/logo.svg": "./static/logo.svg"
+        "/logo.svg": "./com/static/logo.svg"
     }
 }
 
