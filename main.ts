@@ -8,13 +8,15 @@ const App = {
     routes: {
         "/": `${root}/pages/index.html`,
         "/glass": `${root}/pages/glass.html`,
+        "/test": `${root}/pages/test.html`,
 
         /* resources */
+        "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`
     }
 }
 
-import Crate from "https://crate.land/mod";
+import Crate from "https://deno.land/x/crate@v1.2.1/mod.ts";
 const crate = new Crate();
 
 crate.serve(App);

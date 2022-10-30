@@ -2,152 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
 
-    <!-- for a better SEO score; lighthouse please love me back -->
+	<title>Glass — jordan reger</title>
+	<meta name="title" content="glass — jordan reger">
+	<meta name="description" content="a log for all of my glassware and glass-related projects.">
 
-    <title>glass — Jordan Reger</title>
-    <meta name="title" content="glass — Jordan Reger">
-    <meta name="description" content="Glassware built for XE24">
+	<link rel="shortcut icon" href="/logo.svg" />
+	<link rel="preload" as="image" href="/logo.svg">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jordanreger.com/glass">
-    <meta property="og:title" content="glass — Jordan Reger">
-    <meta property="og:description" content="Glassware built for XE24">
-    <meta property="og:image" content="/logo.svg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jordanreger.com/glass">
-    <meta property="twitter:title" content="glass — Jordan Reger">
-    <meta property="twitter:description" content="Glassware built for XE24">
-    <meta property="twitter:image" content="/logo.svg">
-
-    <!-- hopefully that worked -->
-
-    <link rel="shortcut icon" href="/logo.svg" />
-    <link rel="preload" as="image" href="/logo.svg">
-
-    <style>
-        ::-moz-selection {
-            color: #000;
-            background: #FFE551;
-        }
-
-        ::selection {
-            color: #000;
-            background: #FFE551;
-        }
-
-        hr {
-            border: none;
-            background-color: #a4a4a4;
-            height: 2px;
-        }
-
-        img {
-            user-select: none;
-        }
-
-        html {
-            background: #c4c4c4;
-            width: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        br {
-            user-select: none;
-        }
-
-        pre {
-            padding: 1vw 1vh;
-            background-color: #a4a4a4;
-            width: max-content;
-            overflow-x: auto;
-        }
-
-        #airframe {
-            position: absolute;
-            padding-bottom: 5vmin;
-            left: 5vmin;
-            top: 5vmin;
-            width: calc(100% - 10vmin);
-            height: fit-content;
-        }
-
-        .subtitle {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .body {
-            color: #212121;
-        }
-
-        .accent {
-            color: #FFE551;
-            font-weight: bold;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            color: #424242;
-            cursor: pointer;
-        }
-    </style>
-
+	<link rel="stylesheet" href="/index.css" />
 </head>
 
 <body>
-    <div id="airframe">
-        <header>
-            <a href="/">
-                <img src="/logo.svg" alt="crate" width="50" style="float: left" />
-            </a>
-            <div class="subtitle" style="float: right; text-align: right;">jordan<br />reger</div>
-            <div style="clear:both; user-select: none;"></div>
-        </header>
-        <br />
-        <br />
-        <div class="subtitle">glass</div>
-        <br/>
-        <div class="body">
-            this is a log for all of my glassware and glass-related projects.
-            <br/>
-            all of these applications are built for version XE24.
-            <br />
-            <br />
-            [<a href="https://sr.ht/~jordanreger/glass">sourcehut</a>]
-            <br />
-            <br />
-            <hr />
-            <br />
-            <div class="subtitle">helloglass</div>
-            <br />
-            <div class="body">
-                a starter glassware project.
-                <br/>
-                <br/>
-                [<a href="https://git.sr.ht/~jordanreger/HelloGlass">sourcehut</a>] [<a href="https://github.com/jordanreger/HelloGlass">github</a>]
-                <br/>
-                <br/>
-                <br/>
-                To use it, <a href="https://git.sr.ht/~jordanreger/HelloGlass/blob/main/HelloGlass.apk">download the apk</a> and use the following commands to install it:
-                <br/>
-<pre>
-cd Downloads # this is whatever directory you downloaded the apk to
-adb install HelloGlass.apk
-</pre>
-                <br/>
-                And now you have the helloglass app installed onto your glass!
-            </div>
-          </div>
-    </div>
-    </div>
+	<main>
+		<header>
+			<a href="/"><img src="/logo.svg" alt="crate" width="50" style="float: left" /></a>
+			<div class="subtitle" style="float: right; text-align: right;">jordan<br />reger</div>
+			<div style="clear:both; user-select: none;"></div>
+		</header>
+		<article>
+			<div class="subtitle">glass</div>
+			<div class="body">
+				this is a log for all of my glassware and glass-related projects.
+				<br />
+				all of these applications are built for version XE24.
+				<br />
+				<br />
+				[<a href="https://sr.ht/~jordanreger/glass">sourcehut</a>]
+			</div>
+		</article>
+		<hr />
+		<article>
+			<div class="subtitle">helloglass</div>
+			<div class="body">
+				a starter glassware project.
+				<br />
+				<br />
+				[<a href="https://git.sr.ht/~jordanreger/HelloGlass">sourcehut</a>] [<a
+					href="https://github.com/jordanreger/HelloGlass">github</a>]
+				<br />
+				<br />
+				To use it, <a href="https://git.sr.ht/~jordanreger/HelloGlass/blob/main/HelloGlass.apk">download the apk</a> and
+				use the following commands to install it:
+				<br />
+				<pre>cd Downloads # this is whatever directory you downloaded the apk to<br/>adb install HelloGlass.apk</pre>
+				<br />
+				And now you have the helloglass app installed onto your glass!
+			</div>
+		</article>
+	</main>
 </body>
 
 </html>
