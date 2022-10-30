@@ -1,10 +1,16 @@
+let root = ".";
+
+if (location.hostname !== "localhost") {
+    root = "./com"
+}
+
 const App = {
     routes: {
-        "/": "./com/pages/index.html",
-        "/glass": "./com/pages/glass.html",
+        "/": `${root}/pages/index.html`,
+        "/glass": `${root}/pages/glass.html`,
 
         /* resources */
-        "/logo.svg": "./com/static/logo.svg"
+        "/logo.svg": `${root}/static/logo.svg`
     }
 }
 
