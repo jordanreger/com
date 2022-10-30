@@ -1,6 +1,6 @@
 let root = ".";
 
-if (location.hostname !== "localhost") {
+if (Deno.args[0] !== "localhost") {
     root = "./com"
 }
 
