@@ -10,6 +10,9 @@ const App = {
         "/glass": `${root}/pages/glass.html`,
         "/test": `${root}/pages/test.html`,
 
+        "/blog": `${root}/pages/blog/index.html`,
+        "/blog/digital-regression": `${root}/pages/blog/digital-regression.html`,
+
         /* resources */
         "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`

@@ -50,6 +50,11 @@ main {
   transform: translate(-50%);
   margin-top: 2vh;
   width: 90%;
+  padding-bottom: 2vh;
+}
+
+header {
+  padding-bottom: 2vh;
 }
 
 article:not(:last-of-type) {
