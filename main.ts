@@ -11,7 +11,6 @@ const App = {
         "/test": `${root}/pages/test.html`,
 
         "/blog": `${root}/pages/blog/index.html`,
-        "/blog/digital-regression": `${root}/pages/blog/digital-regression.html`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
