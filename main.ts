@@ -14,7 +14,8 @@ const App = {
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
-        "/logo.svg": `${root}/static/logo.svg`
+        "/logo.svg": `${root}/static/logo.svg`,
+        "/robots.txt": `${root}/static/robots.txt`
     }
 }
 
