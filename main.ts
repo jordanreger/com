@@ -19,7 +19,7 @@ const App = {
     }
 }
 
-import Crate from "https://deno.land/x/crate@v1.2.1/mod.ts";
+import Crate from "https://crate.land/mod.ts";
 const crate = new Crate();
 
 crate.serve(App);
