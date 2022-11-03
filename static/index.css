@@ -26,6 +26,7 @@ hr {
 
 img {
   user-select: none;
+	max-width: 100%;
 }
 
 a {
@@ -50,7 +51,7 @@ main {
   transform: translate(-50%);
   margin-top: 2vh;
   width: 90%;
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
 }
 
 header {
