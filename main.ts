@@ -11,13 +11,16 @@ const App = {
         "/test": `${root}/pages/test.html`,
 
         "/blog": `${root}/pages/blog/index.html`,
-		"/blog/left": `${root}/pages/blog/left.html`,
+	"/blog/left": `${root}/pages/blog/left.html`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`,
-		"/left.png": `${root}/static/left.png`,
+	"/left.png": `${root}/static/left.png`,
         "/robots.txt": `${root}/static/robots.txt`,
+
+	/* redirects */
+	"/@jr": "https://indieweb.social/@jr"
     }
 }
 
