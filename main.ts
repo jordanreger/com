@@ -10,8 +10,12 @@ const App = {
         "/glass": `${root}/pages/glass.html`,
         "/test": `${root}/pages/test.html`,
 
-        "/blog": `${root}/pages/blog/index.html`,
-	"/blog/left": `${root}/pages/blog/left.html`,
+        "/blog": `${root}/pages/blog.html`,
+
+        /* archive */
+        "/archive/blog": `${root}/pages/blog/index.html`,
+	    "/archive/blog/left": `${root}/pages/blog/left.html`,
+        "/blog/left": `${Deno.args[0] !== "localhost" ? location.host : "http://localhost:8000"}/archive/blog/left`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
