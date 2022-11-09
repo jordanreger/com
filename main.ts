@@ -14,13 +14,13 @@ const App = {
 
         /* archive */
         "/archive/blog": `${root}/pages/blog/index.html`,
-	    "/archive/blog/left": `${root}/pages/blog/left.html`,
-        "/blog/left": `${Deno.args[0] !== "localhost" ? location.host : "http://localhost:8000"}/archive/blog/left`,
+	      "/archive/blog/left": `${root}/pages/blog/left.html`,
+        "/blog/left": `${Deno.args[0] !== "localhost" ? window.location.host : "http://localhost:8000"}/archive/blog/left`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`,
-	"/left.png": `${root}/static/left.png`,
+	      "/left.png": `${root}/static/left.png`,
         "/robots.txt": `${root}/static/robots.txt`,
 
 	/* redirects */
