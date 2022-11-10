@@ -5,6 +5,6 @@ packages:
 tasks:
 - package: |
     cd com/srht.site
-    tar -cvz . > ./site.tar.gz
+    tar -cvz . > ../site.tar.gz
 - upload: |
-    hut pages publish -d jordanreger.srht.site ./site.tar.gz
+    hut pages publish -d jordanreger.srht.site site.tar.gz
