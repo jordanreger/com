@@ -17,14 +17,13 @@ const App = {
 	    "/archive/blog/left": `${root}/pages/archive/blog/left.html`,
         "/blog/left": `https://jordanreger.com/archive/blog/left`,
 
+        /* wiki */
+        "/wiki" : `${root}/pages/wiki/index.html`,
+
         /* resources */
         "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`,
-	    "/left.png": `${root}/static/left.png`,
-        "/robots.txt": `${root}/static/robots.txt`,
-
-	/* redirects */
-	"/@jr": "https://indieweb.social/@jr"
+        "/robots.txt": `${root}/static/robots.txt`
     }
 }
 
