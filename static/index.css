@@ -83,3 +83,9 @@ article:not(:first-of-type) {
   color: #FFE551;
   font-weight: bold;
 }
+
+.canvas {
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+}

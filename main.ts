@@ -14,7 +14,7 @@ const App = {
 
         /* archive */
         "/archive/blog": `${root}/pages/archive/blog/index.html`,
-	    "/archive/blog/left": `${root}/pages/archive/blog/left.html`,
+	      "/archive/blog/left": `${root}/pages/archive/blog/left.html`,
         "/blog/left": `https://jordanreger.com/archive/blog/left`,
 
         /* wiki */
@@ -22,6 +22,7 @@ const App = {
         "/wiki/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
         "/wiki/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
         "/wiki/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
+        "/wiki/swedish": `${root}/pages/wiki/swedish.md`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
