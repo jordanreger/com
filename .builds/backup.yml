@@ -7,6 +7,6 @@ environment:
 tasks:
 - package: |
     cd com
-    tar -cvz . > ./site.tar.gz
+    tar -cvz ./pages/ ./static/ .htaccess > site.tar.gz
 - upload: |
-    hut pages publish -d $site ./site.tar.gz
+    hut pages publish -d $site ./com/site.tar.gz
