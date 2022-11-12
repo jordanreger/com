@@ -14,13 +14,14 @@ br {
 
 pre {
   padding: 1vw 1vh;
-  background-color: #a4a4a4;
+  border: 1px solid #FFF;
+  color: #FFE551;
   overflow-x: auto;
 }
 
 hr {
   border: none;
-  background-color: #a4a4a4;
+  background-color: #FFF;
   height: 2px;
 }
 
@@ -35,14 +36,15 @@ a {
 }
 
 a:hover {
-  color: #424242;
+  color: #FFE551;
   cursor: pointer;
 }
 
 html {
-  background: #c4c4c4;
+  background: #000;
+  color: #FFF;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 main {
@@ -71,12 +73,8 @@ article:not(:first-of-type) {
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: bold;
-  color: #000;
+  color: #FFE551;
   padding-bottom: 1vh;
-}
-
-.body {
-  color: #212121;
 }
 
 .accent {
@@ -84,8 +82,8 @@ article:not(:first-of-type) {
   font-weight: bold;
 }
 
-.canvas {
-  box-sizing: border-box;
-  max-width: 100%;
-  max-height: 100%;
+.title {
+  border: none;
+  font-size: 0.65rem;
+  user-select: none;
 }

@@ -19,6 +19,7 @@ const App = {
 
         /* wiki */
         "/wiki": `${root}/pages/wiki/index.html`,
+        "/wiki/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
         "/wiki/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
         "/wiki/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
         "/wiki/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
