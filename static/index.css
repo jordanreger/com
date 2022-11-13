@@ -87,3 +87,9 @@ article:not(:first-of-type) {
   font-size: 0.65rem;
   user-select: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 0.25rem;
+  }
+}
