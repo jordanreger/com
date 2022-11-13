@@ -81,6 +81,5 @@ h1, h2, h3, h4, h5, h6, .subtitle {
 .title {
   border: none;
   user-select: none;
-  font-family: "courier new", courier, monospace;
-  font-size: 0.35rem;
+  font-size: 0.65rem;
 }
