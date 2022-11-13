@@ -81,5 +81,5 @@ h1, h2, h3, h4, h5, h6, .subtitle {
 .title {
   border: none;
   user-select: none;
-  font-size: 0.35rem;
+  /*font-size: 0.35rem;*/
 }
