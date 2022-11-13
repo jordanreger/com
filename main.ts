@@ -19,11 +19,11 @@ const App = {
 
         /* wiki */
         "/wiki": `${root}/pages/wiki/index.html`,
-        "/wiki/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
-        "/wiki/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
-        "/wiki/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
-        "/wiki/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
-        "/wiki/swedish": `${root}/pages/wiki/swedish.md`,
+        "/wiki/dev/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
+        "/wiki/dev/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
+        "/wiki/dev/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
+        "/wiki/dev/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
+        "/wiki/other/swedish": `${root}/pages/wiki/swedish.md`,
 
         /* resources */
         "/index.css": `${root}/static/index.css`,
