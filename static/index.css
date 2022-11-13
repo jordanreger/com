@@ -84,7 +84,6 @@ article:not(:first-of-type) {
 
 .title {
   border: none;
-  font-size: 0.65rem;
   user-select: none;
 }
 
