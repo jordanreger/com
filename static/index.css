@@ -88,13 +88,13 @@ article:not(:first-of-type) {
 }
 
 @media only screen and (max-width: 600px) {
-  .title span {
-    font-size: 0.25rem;
+  .title {
+    font-size: 25%;
   }
 }
 
-@media only screen and (min-width: 600) {
-  .title span {
-    font-size: 0.65rem;
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 65%;
   }
 }
