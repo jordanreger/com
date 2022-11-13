@@ -48,11 +48,7 @@ html {
 }
 
 main {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
   margin-top: 2vh;
-  width: 90%;
   padding-bottom: 4vh;
 }
 
@@ -68,7 +64,7 @@ article:not(:first-of-type) {
   padding-top: 2vh;
 }
 
-.subtitle {
+h1, h2, h3, h4, h5, h6, .subtitle {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2rem;
