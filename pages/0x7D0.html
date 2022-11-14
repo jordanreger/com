@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+
+  <title>0x7D0 &#8212; jordan reger</title>
+  <meta name="title" content="0x7d0 &#8212; jordan reger">
+  <meta name="description" content="an easy to understand implementation of the arvelie date format">
+
+  <link rel="shortcut icon" href="/logo.svg" />
+  <link rel="preload" as="image" href="/logo.svg">
+
+  <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <pre class="title">
+     ::::::::::: ::::::::  :::::::::  :::::::::      :::     ::::    ::: 
+        :+:    :+:    :+: :+:    :+: :+:    :+:   :+: :+:   :+:+:   :+:  
+       +:+    +:+    +:+ +:+    +:+ +:+    +:+  +:+   +:+  :+:+:+  +:+   
+      +#+    +#+    +:+ +#++:++#:  +#+    +:+ +#++:++#++: +#+ +:+ +#+    
+     +#+    +#+    +#+ +#+    +#+ +#+    +#+ +#+     +#+ +#+  +#+#+#     
+#+# #+#    #+#    #+# #+#    #+# #+#    #+# #+#     #+# #+#   #+#+#      
+#####      ########  ###    ### #########  ###     ### ###    ####       
+      :::::::::  :::::::::: ::::::::  :::::::::: :::::::::               
+     :+:    :+: :+:       :+:    :+: :+:        :+:    :+:               
+    +:+    +:+ +:+       +:+        +:+        +:+    +:+                
+   +#++:++#:  +#++:++#  :#:        +#++:++#   +#++:++#:                  
+  +#+    +#+ +#+       +#+   +#+# +#+        +#+    +#+                  
+ #+#    #+# #+#       #+#    #+# #+#        #+#    #+#                   
+###    ### ########## ########  ########## ###    ###</pre>
+      [<a href="/">home</a>] [<a href="/blog">blog</a>] [<a href="/wiki">wiki</a>] [<a href="https://sr.ht/~jordanreger">sourcehut ↗</a>]
+    </header>
+    <article>
+      <div class="subtitle"><code>0x7D0</code></div>
+      <div class="body">
+        an easy to understand implementation of the <a href="https://wiki.xxiivv.com/site/arvelie.html">arvelie</a> date format. the calendar starts at 2000 A.D. (hence the name <code>0x7D0</code>, which is hex for 2000). for ease of translation between the gregorian calendar and 0x7D0. <span class="accent">WARNING</span>: this page contains javascript. if you can't run javascript, my apologies.
+      </div>
+    </article>
+    <hr />
+    <article>
+      <div class="subtitle">what's the date?</div>
+      <div class="body">
+        today's <code>0x7D0</code> date is:
+        <br/>
+        <br/>
+        <script>
+          window.onload = get0x7d0date;
+
+          function get0x7d0date() {
+            var now = new Date();
+            var year = now.getFullYear() - 2000;
+
+            var start = new Date(now.getFullYear(), 0, 0);
+            var diff = now - start;
+            var oneDay = 1000 * 60 * 60 * 24;
+            var day = Math.floor(diff / oneDay);
+
+            /* this handles the 0 for A thing instead of the math */
+            var month = String.fromCharCode(65 + Math.floor(day / 28 * 2));
+
+            console.log(month);
+
+            day = day - (14 * Math.floor(day / 28 * 2)) - 1;
+
+            var arvelie_date = `${year}${month}${day}`;
+            document.getElementById("0x7d0-date").innerHTML = arvelie_date;
+          }
+        </script>
+        <b><div id="0x7d0-date"></div><b>
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>

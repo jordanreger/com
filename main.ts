@@ -9,10 +9,11 @@ const App = {
         "/": `${root}/pages/index.html`,
         "/glass": `${root}/pages/glass.html`,
         "/test": `${root}/pages/test.html`,
-
-        "/protocolTest": `${root}/pages/protocolTest.html`,
-
         "/blog": `${root}/pages/blog.html`,
+
+        /* misc tools */
+        "/protocolTest": `${root}/pages/protocolTest.html`,
+        "/0x7D0": `${root}/pages/0x7D0.html`,
 
         /* archive */
         "/archive/blog": `${root}/pages/archive/blog/index.html`,
