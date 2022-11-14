@@ -10,6 +10,8 @@ const App = {
         "/glass": `${root}/pages/glass.html`,
         "/test": `${root}/pages/test.html`,
 
+        "/protocolTest": `${root}/pages/protocolTest.html`,
+
         "/blog": `${root}/pages/blog.html`,
 
         /* archive */
@@ -22,7 +24,7 @@ const App = {
         "/wiki/dev/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
         "/wiki/dev/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
         "/wiki/dev/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
-        "/wiki/dev/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
+        "/wiki/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
         "/wiki/other/swedish": `${root}/pages/wiki/swedish.md`,
 
         /* resources */
