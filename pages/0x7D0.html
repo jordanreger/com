@@ -9,7 +9,6 @@
   <meta name="description" content="an easy to understand implementation of the arvelie date format">
 
   <link rel="shortcut icon" href="/logo.svg" />
-  <link rel="preload" as="image" href="/logo.svg">
 
   <link rel="stylesheet" href="/index.css" />
 </head>
@@ -44,33 +43,51 @@
     <article>
       <div class="subtitle">what's the date?</div>
       <div class="body">
-        today's <code>0x7D0</code> date is:
+        today's <code>0x7D0</code> date is <b><span id="0x7D0-date"><noscript>i have no idea!</noscript></span></b>.
         <br/>
         <br/>
+        this is generated via the following (quite awful) javascript code:
+
+        <pre>
+function get0x7d0date() {
+
+  function pad(n) {
+    return (n < 10) ? ("0" + n) : n;
+  }
+
+  var now = new Date();
+  var year = now.getFullYear() - 2000;
+  var day_of_year = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24) - 1;
+  var month_number = Math.floor((day_of_year) / 14);
+  var month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
+  var day = day_of_year - (month_number * 14);
+
+  var arvelie_date = `${pad(year)}${month}${pad(day)}`;
+}</pre>
+        
+        <!-- 0x7D0 date generator -->
         <script>
           window.onload = get0x7d0date;
 
           function get0x7d0date() {
+
+            function pad(n) {
+              return (n < 10) ? ("0" + n) : n;
+            }
+
             var now = new Date();
             var year = now.getFullYear() - 2000;
+            var day_of_year = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24) - 1;
+            var month_number = Math.floor((day_of_year) / 14);
+            var month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
+            var day = day_of_year - (month_number * 14);
 
-            var start = new Date(now.getFullYear(), 0, 0);
-            var diff = now - start;
-            var oneDay = 1000 * 60 * 60 * 24;
-            var day = Math.floor(diff / oneDay);
-
-            /* this handles the 0 for A thing instead of the math */
-            var month = String.fromCharCode(65 + Math.floor(day / 28 * 2));
-
-            console.log(month);
-
-            day = day - (14 * Math.floor(day / 28 * 2)) - 1;
-
-            var arvelie_date = `${year}${month}${day}`;
-            document.getElementById("0x7d0-date").innerHTML = arvelie_date;
+            var arvelie_date = `${pad(year)}${month}${pad(day)}`;
+            var el = document.getElementById("0x7D0-date");
+            el.innerHTML = arvelie_date;
+            el.title = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
           }
         </script>
-        <b><div id="0x7d0-date"></div><b>
       </div>
     </article>
   </main>
