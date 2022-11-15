@@ -11,10 +11,6 @@ const App = {
         "/test": `${root}/pages/test.html`,
         "/blog": `${root}/pages/blog.html`,
 
-        /* misc tools */
-        "/protocolTest": `${root}/pages/protocolTest.html`,
-        "/0x7D0": `${root}/pages/0x7D0.html`,
-
         /* archive */
         "/archive/blog": `${root}/pages/archive/blog/index.html`,
 	      "/archive/blog/left": `${root}/pages/archive/blog/left.html`,
@@ -22,10 +18,15 @@ const App = {
 
         /* wiki */
         "/wiki": `${root}/pages/wiki/index.html`,
+
         "/wiki/dev/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
         "/wiki/dev/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
         "/wiki/dev/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
-        "/wiki/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
+
+        "/wiki/tools/protocolTest": `${root}/pages/protocolTest.html`,
+        "/wiki/tools/0x7D0": `${root}/pages/0x7D0.html`,
+
+        "/wiki/other/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
         "/wiki/other/swedish": `${root}/pages/wiki/swedish.md`,
 
         /* resources */
