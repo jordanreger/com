@@ -7,6 +7,6 @@ environment:
 tasks:
 - package: |
     cd com/site
-    tar -cvz . > ../site.tar.gz
+    tar -cvz ./ ../nginx-rewrite.conf > ../site.tar.gz
 - upload: |
     hut pages publish -d $site ./com/site.tar.gz
