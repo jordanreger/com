@@ -6,7 +6,7 @@ environment:
   site: jordanreger.srht.site
 tasks:
 - package: |
-    cd com
-    tar -cvz ./site > site.tar.gz
+    cd com/site
+    tar -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d $site ./com/site.tar.gz
