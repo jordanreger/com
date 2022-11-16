@@ -25,6 +25,24 @@ hr {
   height: 2px;
 }
 
+table {
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+table, th, td { 
+  border: 1px solid #FFF;
+  font-family: monospace;
+}
+
+th, td {
+  text-align: center;
+}
+
+td {
+  color: #FFE551;
+}
+
 img {
   user-select: none;
 	max-width: 100%;

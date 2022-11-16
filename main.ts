@@ -25,6 +25,7 @@ const App = {
 
         "/wiki/tools/protocolTest": `${root}/pages/protocolTest.html`,
         "/wiki/tools/0x7D0": `${root}/pages/0x7D0.html`,
+        "/wiki/tools/calendar": `${root}/pages/calendar.html`,
 
         "/wiki/other/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
         "/wiki/other/swedish": `${root}/pages/wiki/swedish.md`,
