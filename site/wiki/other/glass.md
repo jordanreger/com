@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 # glass
 this is a log for all of my glassware and glass-related projects.
@@ -25,3 +25,5 @@ adb install HelloGlass.apk
 ```
 
 And now you have the helloglass app installed onto your glass!
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/other/glass.md">source</a>] [<a href="/updates.html">updates</a>]</footer>

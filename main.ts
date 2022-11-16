@@ -7,28 +7,24 @@ if (Deno.args[0] !== "localhost") {
 const App = {
     routes: {
         "/": `${root}/index.html`,
-        "/blog": `${root}/blog.html`,
-        "/test": `${root}/test.html`,
-
-        /* archive */
-        "/archive/blog": `${root}/archive/blog/index.html`,
-	    "/archive/blog/left": `${root}/archive/blog/left.html`,
-        "/blog/left": `${root}/archive/blog/left.html`,
+        "/updates.html": `${root}/updates.html`,
+        "/blog.html": `${root}/blog.html`,
+        "/test.html": `${root}/test.html`,
 
         /* wiki */
-        "/wiki": `${root}/wiki/index.html`,
+        "/wiki.html": `${root}/wiki.html`,
 
-        "/wiki/dev/conventional-commits": `${root}/wiki/dev/conventional-commits.md`,
-        "/wiki/dev/sourcehut-to-github-mirror": `${root}/wiki/dev/sourcehut-to-github-mirror.md`,
-        "/wiki/dev/deno-deploy": `${root}/wiki/dev/deno-deploy.md`,
+        "/wiki/dev/conventional-commits.md": `${root}/wiki/dev/conventional-commits.md`,
+        "/wiki/dev/sourcehut-to-github-mirror.md": `${root}/wiki/dev/sourcehut-to-github-mirror.md`,
+        "/wiki/dev/deno-deploy.md": `${root}/wiki/dev/deno-deploy.md`,
 
-        "/wiki/tools/protocolTest": `${root}/wiki/tools/protocolTest.html`,
-        "/wiki/tools/0x7D0": `${root}/wiki/tools/0x7D0.html`,
-        "/wiki/tools/calendar": `${root}/wiki/tools/calendar.html`,
+        "/wiki/tools/protocolTest.html": `${root}/wiki/tools/protocolTest.html`,
+        "/wiki/tools/0x7D0.html": `${root}/wiki/tools/0x7D0.html`,
+        "/wiki/tools/calendar.html": `${root}/wiki/tools/calendar.html`,
 
-        "/wiki/other/localhost-irc": `${root}/wiki/other/localhost-irc.md`,
-        "/wiki/other/glass": `${root}/wiki/other/glass.md`,
-        "/wiki/other/swedish": `${root}/wiki/other/swedish.md`,
+        "/wiki/other/localhost-irc.md": `${root}/wiki/other/localhost-irc.md`,
+        "/wiki/other/glass.md": `${root}/wiki/other/glass.md`,
+        "/wiki/other/swedish.md": `${root}/wiki/other/swedish.md`,
 
         /* resources */
         "/index.css": `${root}/index.css`,

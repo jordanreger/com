@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 
 # Sourcehut to GitHub Mirror
@@ -19,3 +19,5 @@ tasks:
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         git push github main
 ```
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/dev/sourcehut-to-github-mirror.md">source</a>] [<a href="/updates.html">updates</a>]</footer>

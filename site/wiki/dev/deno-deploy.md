@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 
 # Sourcehut Deno Deploy Integration
@@ -29,3 +29,5 @@ tasks:
         PATH="$DENO_INSTALL/bin:$PATH"
         deployctl deploy --project=my-project ./repository/main.ts --import-map=./repository/import_map.json --token=$DEPLOY_TOKEN --prod
 ```
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/dev/deno-deploy.md">source</a>] [<a href="/updates.html">updates</a>]</footer>

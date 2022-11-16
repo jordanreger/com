@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 
 # swedish
@@ -55,3 +55,5 @@ the definite article is suffixed to the noun. <i>en</i> words take the suffix <b
 - datorn &#8212; the computer (this one is special)
 - hemsidan &#8212; the website
 - skrivbordet &#8212; the desk
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/other/swedish.md">source</a>] [<a href="/updates.html">updates</a>]</footer>

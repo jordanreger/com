@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 
 # localhost irc chat
@@ -33,3 +33,5 @@ here's some miscellaneous links and tips for using libera.chat.
 - [how to reset your password](https://libera.chat/guides/sendpass)
 - [how to hide your hostname/ip address](https://libera.chat/guides/cloaks)
 - [gamja](https://git.sr.ht/~emersion/gamja) is a super minimalist irc web client. i happen to like it a lot.
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/other/localhost-irc.md">source</a>] [<a href="/updates.html">updates</a>]</footer>

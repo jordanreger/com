@@ -62,15 +62,22 @@ html {
   background: #000;
   color: #FFF;
   width: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 main {
   margin-top: 2vh;
-  padding-bottom: 4vh;
+  padding-bottom: 6vh;
 }
 
 header {
   padding-bottom: 2vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 2vh;
 }
 
 article:not(:last-of-type) {

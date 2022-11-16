@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/index.css">
 
-[[← go back](/wiki)]
+[[← go back](/wiki.html)]
 
 
 # Conventional Commits
@@ -36,3 +36,5 @@ The most common is probably as follows:
 A commit message can have a body and footers.
 
 > `todo(wiki): finish paragraph about body`
+
+<footer>[<a href="https://git.sr.ht/~jordanreger/com/tree/main/item/site/wiki/dev/conventional-commits.md">source</a>] [<a href="/updates.html">updates</a>]</footer>
