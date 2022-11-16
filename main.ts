@@ -1,39 +1,39 @@
-let root = ".";
+let root = "./site";
 
 if (Deno.args[0] !== "localhost") {
-    root = "./com"
+    root = "./com/site"
 }
 
 const App = {
     routes: {
-        "/": `${root}/pages/index.html`,
-        "/glass": `${root}/pages/glass.html`,
-        "/test": `${root}/pages/test.html`,
-        "/blog": `${root}/pages/blog.html`,
+        "/": `${root}/index.html`,
+        "/blog": `${root}/blog.html`,
+        "/test": `${root}/test.html`,
 
         /* archive */
-        "/archive/blog": `${root}/pages/archive/blog/index.html`,
-	      "/archive/blog/left": `${root}/pages/archive/blog/left.html`,
-        "/blog/left": `https://jordanreger.com/archive/blog/left`,
+        "/archive/blog": `${root}/archive/blog/index.html`,
+	    "/archive/blog/left": `${root}/archive/blog/left.html`,
+        "/blog/left": `${root}/archive/blog/left.html`,
 
         /* wiki */
-        "/wiki": `${root}/pages/wiki/index.html`,
+        "/wiki": `${root}/wiki/index.html`,
 
-        "/wiki/dev/conventional-commits": `${root}/pages/wiki/conventional-commits.md`,
-        "/wiki/dev/sourcehut-to-github-mirror": `${root}/pages/wiki/sourcehut-to-github-mirror.md`,
-        "/wiki/dev/deno-deploy": `${root}/pages/wiki/deno-deploy.md`,
+        "/wiki/dev/conventional-commits": `${root}/wiki/dev/conventional-commits.md`,
+        "/wiki/dev/sourcehut-to-github-mirror": `${root}/wiki/dev/sourcehut-to-github-mirror.md`,
+        "/wiki/dev/deno-deploy": `${root}/wiki/dev/deno-deploy.md`,
 
-        "/wiki/tools/protocolTest": `${root}/pages/protocolTest.html`,
-        "/wiki/tools/0x7D0": `${root}/pages/0x7D0.html`,
-        "/wiki/tools/calendar": `${root}/pages/calendar.html`,
+        "/wiki/tools/protocolTest": `${root}/wiki/tools/protocolTest.html`,
+        "/wiki/tools/0x7D0": `${root}/wiki/tools/0x7D0.html`,
+        "/wiki/tools/calendar": `${root}/wiki/tools/calendar.html`,
 
-        "/wiki/other/localhost-irc": `${root}/pages/wiki/localhost-irc.md`,
-        "/wiki/other/swedish": `${root}/pages/wiki/swedish.md`,
+        "/wiki/other/localhost-irc": `${root}/wiki/other/localhost-irc.md`,
+        "/wiki/other/glass": `${root}/wiki/other/glass.md`,
+        "/wiki/other/swedish": `${root}/wiki/other/swedish.md`,
 
         /* resources */
-        "/index.css": `${root}/static/index.css`,
-        "/logo.svg": `${root}/static/logo.svg`,
-        "/robots.txt": `${root}/static/robots.txt`
+        "/index.css": `${root}/index.css`,
+        "/logo.svg": `${root}/logo.svg`,
+        "/robots.txt": `${root}/robots.txt`
     }
 }
 
