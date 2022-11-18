@@ -19,6 +19,11 @@ if you'd like to talk about urban planning, rockets, mountain bikes, swedish, we
 => https://linkedin.com/in/jordanreger linkedin
 => mailto:mail@jordanreger.com email
 
+this site has backups!
+
+=> https://jordanreger.com jordanreger.com
+=> https://backup.jordanreger.com backup.jordanreger.com
+
 # software
 most of my software is hosted on either:
 
@@ -45,4 +50,4 @@ crate — fullstack web framework built with deno!
 => https://github.com/jordanreger/crate github
 
 
-=> https://git.sr.ht/~jordanreger/com/tree/main/item/gemini/index.gmi
+=> https://git.sr.ht/~jordanreger/com/tree/main/item/gemini/index.gmi source
