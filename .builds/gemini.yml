@@ -1,0 +1,12 @@
+image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: jordanreger.srht.site
+tasks:
+- package: |
+    cd com/gemini
+    tar -cvz . > ../site.tar.gz
+- upload: |
+    acurl -f https://pages.sr.ht/publish/$site \
+      -Fcontent=@site.tar.gz
+      -Fprotocol=GEMINI
