@@ -1,4 +1,4 @@
-image: alpine/edge
+image: ubuntu/20.04
 oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
@@ -9,7 +9,7 @@ tasks:
     curl -fsSL https://deno.land/x/install/install.sh | sh
 - build: |
     cd com
-    DENO_INSTALL=".deno/"
+    DENO_INSTALL="/home/build/.deno"
     PATH="$DENO_INSTALL/bin:$PATH"
     deno run -A build.ts
 - package: |

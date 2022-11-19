@@ -1,4 +1,4 @@
-image: alpine/edge
+image: ubuntu/20.04
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: jordanreger.com
