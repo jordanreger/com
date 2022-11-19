@@ -3,10 +3,10 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
 environment:
-  site: backup.jordanreger.com
+  site: jordanreger.com
 tasks:
 - package: |
-    cd com/site
+    cd com/build
     tar -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d $site ./com/site.tar.gz

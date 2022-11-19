@@ -1,7 +1,7 @@
-let root = "./site";
+let root = "./build";
 
 if (Deno.args[0] !== "localhost") {
-    root = "./com/site"
+    root = "./com/build"
 }
 
 const App = {
