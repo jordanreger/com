@@ -9,9 +9,9 @@ tasks:
     - install-deno: |
         curl -fsSL https://deno.land/x/install/install.sh | sh
     - build: |
+        cd com
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
-        cd com
         deno run -A build.ts
     - install-deployctl: |
         DENO_INSTALL="/home/build/.deno"
