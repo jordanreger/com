@@ -5,6 +5,13 @@ packages:
 environment:
   site: jordanreger.com
 tasks:
+- install-deno: |
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+- build: |
+    DENO_INSTALL="/home/build/.deno"
+    PATH="$DENO_INSTALL/bin:$PATH"
+    cd com
+    deno run -A build.ts
 - package: |
     cd com/build
     tar -cvz . > ../site.tar.gz
