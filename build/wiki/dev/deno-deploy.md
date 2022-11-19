@@ -1,10 +1,19 @@
+<link rel="stylesheet" href="/index.css">
+
+[[← go back](/wiki.html)]
+
+
+# Sourcehut Deno Deploy Integration
+Below is a build file to integrate your project on Sourcehut with [Deno Deploy](https://deno.com/deploy).
+
+```yml
 image: ubuntu/20.04
 packages:
     - unzip
 sources:
-    - https://git.sr.ht/~jordanreger/com
+    - https://git.sr.ht/~username/repository
 secrets:
-    - 40905730-8922-46ad-8f53-dc416722a53f
+    - big-long-uuid # this is your deploy key, add it at https://builds.sr.ht/secrets - make sure the file is called "~/.deploy_key"
 tasks:
     - install-deno: |
         curl -fsSL https://deno.land/x/install/install.sh | sh
@@ -18,4 +27,5 @@ tasks:
         set -x
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
-        deployctl deploy --project=jordanreger ./com/main.ts --token=$DEPLOY_TOKEN --prod
+        deployctl deploy --project=my-project ./repository/main.ts --import-map=./repository/import_map.json --token=$DEPLOY_TOKEN --prod
+```
