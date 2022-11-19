@@ -17,6 +17,7 @@ pre {
   border: 1px solid #FFF;
   color: #FFE551;
   overflow-x: auto;
+  margin: 0;
 }
 
 hr {
@@ -73,6 +74,19 @@ main {
 
 header {
   padding-bottom: 2vh;
+  display: flex;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+}
+
+header ul {
+  list-style: none;
 }
 
 footer {

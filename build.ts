@@ -67,10 +67,14 @@ getFiles(path).forEach(file => {
   let contents = Deno.readTextFileSync(file);
   if(file !== "site\\template.html") {
     if(file.includes(".html")) {
+      file = file.replace("site\\", "");
+      //console.log(file.replace(".html", ""));
       contents = templating(contents);
+    } else {
+      file = file.replace("site\\", "");
     }
 
-    file = file.replace("site\\", "build\\");
+    file = "build\\" + file;
     Deno.writeTextFileSync(file, contents);
   }
 });
