@@ -36,7 +36,7 @@ const App = {
         "/index.css": `${root}/index.css`,
         "/logo.svg": `${root}/logo.svg`,
         "/robots.txt": `${root}/robots.txt`,
-        "/resources/ghostintheshell.gif": `${root}/resources/ghostintheshell.gif`
+        "/resources/bladerunner2049tree.jpg": `${root}/resources/bladerunner2049tree.jpg`
     }
 }
 
