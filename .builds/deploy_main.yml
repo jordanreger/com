@@ -1,14 +1,20 @@
-image: alpine/edge
+image: ubuntu/20.04
 oauth: pages.sr.ht/PAGES:RW
-packages:
-- hut
 environment:
-  site: jordanreger.com
+    site: jordanreger.com
+packages:
+    - unzip
 tasks:
 - install-deno: |
     curl -fsSL https://deno.land/x/install/install.sh | sh
+- build: |
+    cd com
+    DENO_INSTALL="/home/build/.deno"
+    PATH="$DENO_INSTALL/bin:$PATH"
+    deno run -A build.ts
 - package: |
     cd com/build
     tar -cvz . > ../site.tar.gz
 - upload: |
-    hut pages publish -d $site ./com/site.tar.gz
+    acurl -f https://pages.sr.ht/publish/$site \
+      -Fcontent=@./com/site.tar.gz
