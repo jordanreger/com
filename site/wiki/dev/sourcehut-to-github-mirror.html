@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="/index.css">
+---
+title = "sourcehut to github mirror"
+description = "a build file to mirror any repository to a matching github repository"
+links = "wiki.dev"
+---
 
-[[← go back](/wiki.html)]
-
-
+<pre>
 # Sourcehut to GitHub Mirror
 Below is a build file to mirror any repository to a matching GitHub repository.
 
@@ -19,3 +21,4 @@ tasks:
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         git push github main
 ```
+</pre>

@@ -83,6 +83,7 @@ header a {
 
 header nav {
   display: flex;
+  flex-wrap: wrap;
 }
 
 header ul {

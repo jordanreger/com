@@ -50,6 +50,7 @@ function getFiles(path: string) {
   return files;
 }
 
+/* deals with the frontmatter */
 function templating(src: string) {
   const template = Deno.readTextFileSync(`site${slash}template.html`);
   let frontmatter = src.match(/---(.*?)---/gmis);
@@ -62,6 +63,9 @@ function templating(src: string) {
     frontmatter = parse(frontmatter);
     src = src.replaceAll("{ title }", frontmatter.title);
     src = src.replaceAll("{ description }", frontmatter.description);
+    const links_path = frontmatter.links.replaceAll(".", slash) + slash + "links.html";
+    const links_content = Deno.readTextFileSync(`site${slash}${links_path}`);
+    src = src.replaceAll("{ links }", links_content);
   }
   
   return src;
@@ -70,10 +74,9 @@ function templating(src: string) {
 /* writes the original content to the build files */
 getFiles(path).forEach(file => {
   let contents = Deno.readTextFileSync(file);
-  if(file !== `site${slash}template.html`) {
+  if(file !== `site${slash}template.html` && !file.includes("links.html")) {
     if(file.includes(".html")) {
       file = file.replace(`site${slash}`, "");
-      //console.log(file.replace(".html", ""));
       contents = templating(contents);
     } else {
       file = file.replace(`site${slash}`, "");

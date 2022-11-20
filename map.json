@@ -1,0 +1,27 @@
+{
+  "wiki": {
+    "index": "wiki.html",
+    "dev": {
+      "index": "dev.html",
+      "conventional commits": "conventional-commits.html",
+      "deno deploy": "deno-deploy.html",
+      "sourcehut to github mirror": "sourcehut-to-github-mirror.html",
+      "glass": "glass.html"
+    },
+    "tools": {
+      "index": "tools.html",
+      "0x7D0": "0x7D0.html",
+      "calendar": "calendar.html"
+    },
+    "other": {
+      "index": "other.html",
+      "swedish": "swedish.html"
+    }
+  },
+  "meta": {
+    "index": "meta.html",
+    "home": "home.html",
+    "updates": "updates.html",
+    "blog": "blog.html"
+  }
+}
