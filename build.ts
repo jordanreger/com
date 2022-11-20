@@ -50,21 +50,34 @@ function getFiles(path: string) {
   return files;
 }
 
-/* deals with the frontmatter */
+/* deals with the templating and the frontmatter of each page */
 function templating(src: string) {
   const template = Deno.readTextFileSync(`site${slash}template.html`);
   let frontmatter = src.match(/---(.*?)---/gmis);
 
+  /* replaces body of template with file */
   src = template.replace("{ body }", src);
   if(frontmatter) {
     frontmatter = frontmatter[0];
     src = src.replaceAll(frontmatter, "");
     frontmatter = frontmatter.replaceAll("---", "");
+    /* parses it into toml */
     frontmatter = parse(frontmatter);
+
+    /* replaces title, description, and nav links */
     src = src.replaceAll("{ title }", frontmatter.title);
     src = src.replaceAll("{ description }", frontmatter.description);
     const links_path = frontmatter.links.replaceAll(".", slash) + slash + "links.html";
-    const links_content = Deno.readTextFileSync(`site${slash}${links_path}`);
+    let links_content = Deno.readTextFileSync(`site${slash}${links_path}`);
+
+    let match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
+
+    match?.forEach(match => {
+      if(match.includes(">" + frontmatter.active + "<")) {
+        links_content = links_content.replace(match, `<i>${match}</i>`);
+      }
+    })
+    
     src = src.replaceAll("{ links }", links_content);
   }
   
