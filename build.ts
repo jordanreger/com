@@ -1,10 +1,15 @@
 const path = "./site", build = "./build";
+let slash = "/";
 
 import { join } from "https://deno.land/std@0.165.0/path/mod.ts";
-import { parse, stringify } from "https://deno.land/std@0.165.0/encoding/toml.ts";
+import { parse } from "https://deno.land/std@0.165.0/encoding/toml.ts";
 
 // checks if build directory exists. if not, make it!
 try { Deno.readDirSync(build) } catch(_) { Deno.mkdirSync(build) }
+
+if(Deno.build.os === "windows") {
+  slash = "\\";
+}
 
 /* returns a list of all directories in the original path to make in the build path */
 function getDirs(path: string) {
@@ -25,7 +30,7 @@ function getDirs(path: string) {
 
 /* removes original path and makes the directory in the build path (if it doesn't already exist) */
 getDirs(path).forEach(dir => {
-  dir = dir.replace("site\\", "");
+  dir = dir.replace(`site${slash}`, "");
   try { Deno.readDirSync(join(build, dir)) } catch(_) { Deno.mkdirSync(join(build, dir)) }
 });
 
@@ -46,7 +51,7 @@ function getFiles(path: string) {
 }
 
 function templating(src: string) {
-  const template = Deno.readTextFileSync("site\\template.html");
+  const template = Deno.readTextFileSync(`site${slash}template.html`);
   let frontmatter = src.match(/---(.*?)---/gmis);
 
   src = template.replace("{ body }", src);
@@ -65,16 +70,16 @@ function templating(src: string) {
 /* writes the original content to the build files */
 getFiles(path).forEach(file => {
   let contents = Deno.readTextFileSync(file);
-  if(file !== "site\\template.html") {
+  if(file !== `site${slash}template.html`) {
     if(file.includes(".html")) {
-      file = file.replace("site\\", "");
+      file = file.replace(`site${slash}`, "");
       //console.log(file.replace(".html", ""));
       contents = templating(contents);
     } else {
-      file = file.replace("site\\", "");
+      file = file.replace(`site${slash}`, "");
     }
 
-    file = "build\\" + file;
+    file = `build${slash}` + file;
     Deno.writeTextFileSync(file, contents);
   }
 });
