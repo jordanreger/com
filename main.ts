@@ -12,6 +12,7 @@ const App = {
         "/wiki.html": `${root}/wiki.html`,
         
         "/meta": `${root}/meta/index.html`,
+        "/meta/about.html": `${root}/meta/about.html`,
         "/meta/blog.html": `${root}/meta/blog.html`,
         "/meta/test.html": `${root}/meta/test.html`,
         "/meta/updates.html": `${root}/meta/updates.html`,
@@ -34,7 +35,8 @@ const App = {
         /* resources */
         "/index.css": `${root}/index.css`,
         "/logo.svg": `${root}/logo.svg`,
-        "/robots.txt": `${root}/robots.txt`
+        "/robots.txt": `${root}/robots.txt`,
+        "/resources/ghostintheshell.gif": `${root}/resources/ghostintheshell.gif`
     }
 }
 
