@@ -10,7 +10,27 @@
 
   <link rel="shortcut icon" href="/logo.svg" />
 
+  <link rel="preload" href="/index.css" as="style" />
   <link rel="stylesheet" href="/index.css" />
+
+  <script>
+    if(window.location.hostname === "localhost") {
+      var div = document.createElement("div");
+      div.innerHTML = `
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      `;
+      document.getElementsByTagName("head")[0].appendChild(div);
+    } else {
+      var div = document.createElement("div");
+      div.innerHTML = `
+      <link rel="preload" href="/resources/Inter/inter.css" as="style" />
+      <link rel="stylesheet" href="/resources/Inter/inter.css" />
+      `;
+      document.getElementsByTagName("head")[0].appendChild(div);
+    }
+  </script>
 </head>
 
 <body>
