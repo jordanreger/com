@@ -71,10 +71,12 @@ function templating(src: string) {
     let links_content = Deno.readTextFileSync(`site${slash}${links_path}`);
 
     let match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
-
+    let active_path = frontmatter.active.split("/");
     match?.forEach(match => {
-      if(match.includes(">" + frontmatter.active + "<")) {
-        links_content = links_content.replace(match, `<i>${match}</i>`);
+      for(const path of active_path){
+        if(match.includes(">" + path + "<")) {
+          links_content = links_content.replace(match, `<i>${match}</i>`);
+        }
       }
     })
     

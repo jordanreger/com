@@ -14,8 +14,9 @@ const App = {
         "/meta": `${root}/meta/index.html`,
         "/meta/about.html": `${root}/meta/about.html`,
         "/meta/blog.html": `${root}/meta/blog.html`,
-        "/meta/test.html": `${root}/meta/test.html`,
         "/meta/updates.html": `${root}/meta/updates.html`,
+        "/meta/about/index.html": `${root}/meta/about/index.html`,
+        "/meta/about/jordan-reger.html": `${root}/meta/about/jordan-reger.html`,
 
         "/wiki": `${root}/wiki/index.html`,
         "/wiki/dev.html": `${root}/wiki/dev.html`,
