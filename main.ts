@@ -11,11 +11,12 @@ const App = {
         "/meta.html": `${root}/meta.html`,
         "/wiki.html": `${root}/wiki.html`,
         "/about.html": `${root}/about.html`,
+        "/now.html": `${root}/now.html`,
         
         "/meta": `${root}/meta/index.html`,
         "/meta/about.html": `${root}/meta/about.html`,
         "/meta/blog.html": `${root}/meta/blog.html`,
-        "/meta/updates.html": `${root}/meta/updates.html`,
+        "/meta/now.html": `${root}/meta/now.html`,
         "/meta/about/index.html": `${root}/meta/about/index.html`,
         "/meta/about/jordan-reger.html": `${root}/meta/about/jordan-reger.html`,
 

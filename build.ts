@@ -51,7 +51,7 @@ function getFiles(path: string) {
 }
 
 /* deals with the templating and the frontmatter of each page */
-function templating(src: string) {
+function templating(src: string, file: string) {
   const template = Deno.readTextFileSync(`site${slash}template.html`);
   let frontmatter = src.match(/---(.*?)---/gmis);
 
@@ -81,6 +81,8 @@ function templating(src: string) {
     })
     
     src = src.replaceAll("{ links }", links_content);
+
+    src = src.replaceAll("{ source link }", `https://git.sr.ht/~jordanreger/com/tree/main/item/site/${file}`)
   }
   
   return src;
@@ -93,7 +95,7 @@ getFiles(path).forEach(file => {
       let contents = Deno.readTextFileSync(file);
       file = file.replace(`site${slash}`, "");
       if(!file.includes(".css") && !file.includes(".txt")){
-        contents = templating(contents);
+        contents = templating(contents, file);
       }
       
       file = `build${slash}` + file;
