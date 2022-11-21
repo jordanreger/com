@@ -92,7 +92,9 @@ getFiles(path).forEach(file => {
     if(file !== `site${slash}template.html` && !file.includes("links.html")) {
       let contents = Deno.readTextFileSync(file);
       file = file.replace(`site${slash}`, "");
-      contents = templating(contents);
+      if(!file.includes(".css") && !file.includes(".txt")){
+        contents = templating(contents);
+      }
       
       file = `build${slash}` + file;
       Deno.writeTextFileSync(file, contents);

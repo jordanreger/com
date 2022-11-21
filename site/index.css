@@ -1,3 +1,5 @@
+@import url(./resources/Inter/inter.css);
+
 ::-moz-selection {
   color: #000;
   background: #FFE551;
@@ -65,6 +67,7 @@ html {
   width: 100%;
   position: relative;
   min-height: 100%;
+  font-family: Inter;
 }
 
 main {
