@@ -86,16 +86,22 @@ function templating(src: string) {
 
 /* writes the original content to the build files */
 getFiles(path).forEach(file => {
-  let contents = Deno.readTextFileSync(file);
-  if(file !== `site${slash}template.html` && !file.includes("links.html")) {
-    if(file.includes(".html")) {
+  if(file.includes(".html") || file.includes(".css") || file.includes(".txt")){
+    if(file !== `site${slash}template.html` && !file.includes("links.html")) {
+      let contents = Deno.readTextFileSync(file);
       file = file.replace(`site${slash}`, "");
       contents = templating(contents);
+      
+      file = `build${slash}` + file;
+      Deno.writeTextFileSync(file, contents);
+
     } else {
       file = file.replace(`site${slash}`, "");
     }
-
+  } else {
+    const contents = Deno.readFileSync(file);
+    file = file.replace(`site${slash}`, "");
     file = `build${slash}` + file;
-    Deno.writeTextFileSync(file, contents);
+    Deno.writeFileSync(file, contents);
   }
 });
