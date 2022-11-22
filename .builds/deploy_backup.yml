@@ -23,4 +23,4 @@ tasks:
     set -x
     DENO_INSTALL="/home/build/.deno"
     PATH="$DENO_INSTALL/bin:$PATH"
-    deployctl deploy --project=jordanreger ./com/main.ts --token=$DEPLOY_TOKEN --prod
+    deployctl deploy --project=jordanreger ./com/run.ts --token=$DEPLOY_TOKEN --prod
