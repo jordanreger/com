@@ -6,17 +6,17 @@ if(Deno.build.os === "windows") {
   slash = "\\";
 }
 
-function handler(req: Request): Response {
+async function handler(req: Request): Response {
   const url = new URL(req.url);
   const path = `build` + slash + url.pathname;
-  const file = (fp:string) => { return Deno.readFileSync(fp) }
+  const file = (fp:string) => { return Deno.readFile(fp) }
   
   try {
     const file_extension = url.pathname.split("/")[url.pathname.split("/").length - 1].split(".")[1];
-    return new Response(file(path), { headers: { "content-type": contentType(file_extension) } });
+    return new Response(await file(path), { headers: { "content-type": contentType(file_extension) } });
   } catch(_) {
-    return new Response(file(`build` + slash + `index.html`), { headers: { "content-type": "text/html" } });
+    return new Response(await file(`build` + slash + `index.html`), { headers: { "content-type": "text/html" } });
   }
 }
 
-serve(handler);
+await serve(handler);
