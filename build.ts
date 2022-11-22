@@ -104,10 +104,8 @@ getFiles(path).forEach(file => {
     } else {
       file = file.replace(`site${slash}`, "");
     }
-  } else {
-    const contents = Deno.readFileSync(file);
-    file = file.replace(`site${slash}`, "");
-    file = `build${slash}` + file;
-    Deno.writeFileSync(file, contents);
+  }  else {
+    const build_file = file.replace(`site${slash}`, `build${slash}`);
+    Deno.copyFileSync(file, build_file);
   }
 });

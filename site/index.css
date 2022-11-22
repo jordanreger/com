@@ -65,12 +65,16 @@ html {
   width: 100%;
   position: relative;
   min-height: 100%;
-  font-family: Inter;
+  font-family: Arial, sans-serif;
 }
 
 main {
   margin-top: 2vh;
   padding-bottom: 10vh;
+}
+
+#logo {
+  width: 10vw;
 }
 
 header {
