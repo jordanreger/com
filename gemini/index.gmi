@@ -10,44 +10,11 @@
 ```
 
 # README
-i am a software developer in training at WGU.
+welcome to my site. this is a more intricate version of my website, which is a collection of knowledge.
 
-if you'd like to talk about urban planning, rockets, mountain bikes, swedish, weather, software, google glass, dystopian sci-fi books and movies or something else, contact me below! if you find a social media account with my name on it *not* listed below, chances are it's not mine or i don't use it anymore. it's probably the second reason...
+=> /about.gmi about me
+=> /now.gmi what's happening now
 
-=> https://indieweb.social/@jr mastodon
-=> https://youtube.com/jordanreger youtube
-=> https://linkedin.com/in/jordanreger linkedin
-=> mailto:mail@jordanreger.com email
 
-this site has backups!
-
+view on the web:
 => https://jordanreger.com jordanreger.com
-=> https://backup.jordanreger.com backup.jordanreger.com
-
-# software
-most of my software is hosted on either:
-
-=> https://sr.ht/~jordanreger sourcehut
-or 
-=> https://github.com/~jordanreger github
-
-
-below is a short list of my most notable projects:
-
-feeds — a very simple rss reader
-=> https://feeds.land feeds.land
-=> https://sr.ht/~jordanreger/feeds sourcehut
-
-glass — glassware built for XE24
-=> https://jordanreger.com/wiki/other/glass.md project page
-=> https://sr.ht/~jordanreger/glass sourcehut
-
-ltx/itslaunchtime — rocket launch coverage website
-=> https://github.com/jordanreger/itslaunchtime
-
-crate — fullstack web framework built with deno!
-=> https://crate.land crate.land
-=> https://github.com/jordanreger/crate github
-
-
-=> https://git.sr.ht/~jordanreger/com/tree/main/item/gemini/index.gmi source
