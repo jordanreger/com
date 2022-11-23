@@ -22,6 +22,7 @@ pre {
 hr {
   border: none;
   height: 2px;
+  background-color: #000;
 }
 
 table {
@@ -94,8 +95,10 @@ header ul {
 footer {
   position: absolute;
   bottom: 2vh;
+  right: 2vw;
   display: flex;
   align-items:center;
+  text-align: right;
 }
 
 footer > * {
