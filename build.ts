@@ -67,8 +67,8 @@ function templating(src: string, file: string) {
     /* replaces title, description, and nav links */
     src = src.replaceAll("{ title }", frontmatter.title);
     src = src.replaceAll("{ description }", frontmatter.description);
-    const links_path = frontmatter.links.replaceAll(".", slash) + slash + "links.html";
-    let links_content = Deno.readTextFileSync(`site${slash}${links_path}`);
+    const links_path = frontmatter.links.replaceAll(".", "-") + "_links.html";
+    let links_content = Deno.readTextFileSync(`.${slash}links${slash}${links_path}`);
 
     let match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
     let active_path = frontmatter.active.split("/");
@@ -108,4 +108,16 @@ getFiles(path).forEach(file => {
     const build_file = file.replace(`site${slash}`, `build${slash}`);
     Deno.copyFileSync(file, build_file);
   }
+});
+
+try { Deno.readDirSync(`build${slash}links`) } catch(_) { Deno.mkdirSync(`build${slash}links`) }
+getFiles(`links`).forEach(file => {
+  const build_file = file.replace(`links${slash}`, `build${slash}links${slash}`);
+  Deno.copyFileSync(file, build_file);
+});
+
+try { Deno.readDirSync(`build${slash}resources`) } catch(_) { Deno.mkdirSync(`build${slash}resources`) }
+getFiles(`resources`).forEach(file => {
+  const build_file = file.replace(`resources${slash}`, `build${slash}resources${slash}`);
+  Deno.copyFileSync(file, build_file);
 });
