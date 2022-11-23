@@ -1,15 +1,14 @@
 ---
 title = "deno deploy"
 description = "a build file to integrate your project on sourcehut with deno deploy"
-links = "wiki.dev.markdown"
-active = "wiki/dev/markdown/deno deploy"
+links = "wiki.software.markdown"
+active = "wiki/software/markdown/deno deploy"
 ---
 
-<pre>
-# Sourcehut Deno Deploy Integration
-Below is a build file to integrate your project on Sourcehut with [Deno Deploy](https://deno.com/deploy).
-
-```yml
+<article>
+  <h1 id="sourcehut-deno-deploy-integration">Sourcehut Deno Deploy Integration</h1>
+  <p>Below is a build file to integrate your project on Sourcehut with <a href="https://deno.com/deploy">Deno Deploy</a>.</p>
+  <pre>
 image: ubuntu/20.04
 packages:
     - unzip
@@ -30,6 +29,5 @@ tasks:
         set -x
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
-        deployctl deploy --project=my-project ./repository/main.ts --import-map=./repository/import_map.json --token=$DEPLOY_TOKEN --prod
-```
-</pre>
+        deployctl deploy --project=my-project ./repository/main.ts --import-map=./repository/import_map.json --token=$DEPLOY_TOKEN --prod</pre>
+</article>

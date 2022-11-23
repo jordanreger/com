@@ -1,15 +1,14 @@
 ---
 title = "sourcehut to github mirror"
 description = "a build file to mirror any repository to a matching github repository"
-links = "wiki.dev.markdown"
-active = "wiki/dev/markdown/sourcehut to github mirror"
+links = "wiki.software.markdown"
+active = "wiki/software/markdown/sourcehut to github mirror"
 ---
 
-<pre>
-# Sourcehut to GitHub Mirror
-Below is a build file to mirror any repository to a matching GitHub repository.
-
-```yml
+<article>
+    <h1>Sourcehut to GitHub Mirror</h1>
+    <p>Below is a build file to mirror any repository to a matching GitHub repository.
+    <pre>
 image: ubuntu/20.04
 sources:
     - https://git.sr.ht/~username/repository
@@ -20,6 +19,6 @@ tasks:
         cd com
         git remote add github git@github.com:username/repository.git
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-        git push github main
-```
-</pre>
+        git push github main</pre>
+    </p>
+</article>

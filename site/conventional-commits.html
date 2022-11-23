@@ -1,42 +1,36 @@
 ---
 title = "conventional commits"
 description = "a guide on how to format commit messages"
-links = "wiki.dev.markdown"
-active = "wiki/dev/markdown/conventional commits"
+links = "wiki.software.markdown"
+active = "wiki/software/markdown/conventional commits"
 ---
 
-<pre>
-# Conventional Commits
-A guide on how to format commit messages. Official documentation at [conventionalcommits.org](https://conventionalcommits.org).
-
-
-## Type
-From the [Angular convention](
-https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type), here's a list of all the different types they allow and what they mean.
-
-- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-- **docs**: Documentation only changes
-- **feat**: A new feature
-- **fix**: A bug fix
-- **perf**: A code change that improves performance
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- **test**: Adding missing tests or correcting existing tests
-
-## Scope
-As listed in the [Specification](https://www.conventionalcommits.org/en/v1.0.0/#specification), a scope is permitted within parentheses *after* the type.
-
-- `feat(blog): new post about coffee`
-
-- `fix: limit posts to 20`
-
-The most common is probably as follows:
-
-- `refactor: update css`
-
-## Body
-A commit message can have a body and footers.
-
-> `todo(wiki): finish paragraph about body`
-</pre>
+<article>
+  <h1 id="conventional-commits">Conventional Commits</h1>
+  <p>A guide on how to format commit messages. Official specification at <a href="https://conventionalcommits.org">conventionalcommits.org</a></p>
+  <h2 id="type">Type</h2>
+  <p>From the <a href="https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type">Angular convention</a>, here&#39;s a list of all the different types they allow and what they mean.</p>
+  <ul>
+  <li><strong>build</strong>: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)</li>
+  <li><strong>ci</strong>: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)</li>
+  <li><strong>docs</strong>: Documentation only changes</li>
+  <li><strong>feat</strong>: A new feature</li>
+  <li><strong>fix</strong>: A bug fix</li>
+  <li><strong>perf</strong>: A code change that improves performance</li>
+  <li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li>
+  <li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</li>
+  <li><strong>test</strong>: Adding missing tests or correcting existing tests</li>
+  </ul>
+  <h2 id="scope">Scope</h2>
+  <p>As listed in the <a href="https://www.conventionalcommits.org/en/v1.0.0/#specification">Specification</a>, a scope is permitted within parentheses <em>after</em> the type.</p>
+  <ul>
+  <li><p><code>feat(blog): new post about coffee</code></p>
+  </li>
+  <li><p><code>fix: limit posts to 20</code></p>
+  </li>
+  </ul>
+  <p>The most common is probably as follows:</p>
+  <ul>
+  <li><code>refactor: update css</code></li>
+  </ul>
+</article>

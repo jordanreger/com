@@ -6,7 +6,7 @@ if(Deno.build.os === "windows") {
   slash = "\\";
 }
 
-async function handler(req: Request): Response {
+async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
   const path = `build` + slash + url.pathname;
   const file = (fp:string) => { return Deno.readFile(fp) }
