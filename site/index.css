@@ -91,6 +91,8 @@ header nav {
 
 header ul {
   list-style: none;
+  padding-inline-start: 0;
+  padding-right: 2rem;
 }
 
 footer {
