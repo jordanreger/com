@@ -79,10 +79,27 @@ function templating(src: string, file: string) {
         }
       }
     })
+    function get0x7d0date() {
+      function pad(n) {
+        return (n < 10) ? ("0" + n) : n;
+      }
+
+      var now = new Date();
+      var year = now.getFullYear() - 2000;
+      var day_of_year = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24) - 1;
+      var month_number = Math.floor((day_of_year) / 14);
+      var month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
+      var day = day_of_year - (month_number * 14);
+
+      var arvelie_date = `${pad(year)}${month}${pad(day)}`;
+      return arvelie_date;
+    }
     
     src = src.replaceAll("{ links }", links_content);
 
-    src = src.replaceAll("{ source link }", `https://git.sr.ht/~jordanreger/com/tree/main/item/site/${file}`)
+    src = src.replaceAll("{ source link }", `https://git.sr.ht/~jordanreger/com/tree/main/item/site/${file}`);
+
+    src = src.replaceAll("{ date }", get0x7d0date());
   }
   
   return src;
