@@ -55,6 +55,7 @@ active = "wiki/print/paper phone"
       position: relative;
       left: 50%;
       top: 50%;
+      text-align: center;
     }
 
     .rotate-right {
@@ -70,7 +71,7 @@ active = "wiki/print/paper phone"
 <article id="paper-phone-info">
   <div class="subtitle">paper phone</div>
   <div class="body">
-    this idea was first put into action by <a href="https://specialprojects.studio">special projects</a> in collaboration with google's digital wellbeing experiments. however, as far as i can tell, it doesn't exist any longer (<a href="/digital-preservation.html">digital preservation</a> am i right), so i made this.
+    this idea was first put into action by <a href="https://specialprojects.studio">special projects</a> in collaboration with google's digital wellbeing experiments. however, as far as i can tell, it doesn't exist any longer (<a href="/digital-preservation.html">digital preservation</a> am i right), so i made this. the date is generated with a UTC date, so depending on where you're at, the date may be a little off.
   </div>
 </article>
 
@@ -94,7 +95,12 @@ active = "wiki/print/paper phone"
     <div class="content rotate-left">3</div>
   </div>
   <div class="grid-1">
-    <div class="content rotate-right" style="font-size: 3rem; font-weight: bold;">{ date }</div>
+    <div class="content rotate-right">
+      <span style="font-size: 3rem; font-weight: bold;">{ date }</span>
+      <br/>
+      <br/>
+      <p>paper phone</p>
+    </div>
   </div>
   <div class="grid-2">
     <div class="content rotate-left">2</div>
