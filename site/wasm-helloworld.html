@@ -1,0 +1,69 @@
+---
+title = "uxn hello world program"
+description = ""
+links = "wiki.software.wasm"
+active = "wiki/software/wasm/hello world"
+---
+
+<article>
+  <div class="subtitle">wasm hello world program</div>
+  <div class="body">
+    please open the console to see the output.
+  </div>
+  <script>
+    const memory = new WebAssembly.Memory({ initial: 1 });
+
+    const importObject = {
+      js: {
+        memory: memory
+      }
+    };
+
+    WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), importObject)
+    .then(obj => {
+      let string = new Uint32Array(obj.instance.exports.memory.buffer);
+      const decoder = new TextDecoder();
+      string = decoder.decode(string).substring(0, 12);
+      
+      console.log(string);
+    });
+  </script>
+  <br/>
+  <br/>
+  <b>string.wat</b>
+  <br/>
+  <pre>
+(module
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (data (i32.const 0) "Hello World!")
+
+  (func
+    i32.const 0
+    i32.const 12
+    i32.store
+  )
+)</pre>
+  <br/>
+  <br/>
+  <b>script tag</b>
+<pre>
+const memory = new WebAssembly.Memory({ initial: 1 });
+
+const importObject = {
+  js: {
+    memory: memory
+  }
+};
+
+WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), importObject)
+.then(obj => {
+  let string = new Uint32Array(obj.instance.exports.memory.buffer);
+  const decoder = new TextDecoder();
+  string = decoder.decode(string).substring(0, 12);
+  
+  console.log(string);
+});
+</pre>
+</article>
