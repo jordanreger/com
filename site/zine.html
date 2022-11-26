@@ -1,0 +1,105 @@
+---
+itle = "paper phone"
+description = "a printable phone! what?"
+links = "wiki.print"
+active = "wiki/print/paper phone"
+---
+
+<style>
+  #paper-phone {
+    display: none;
+  }
+
+  @media print {
+    #paper-phone-info {
+      display: none;
+    }
+
+    #paper-phone {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr 1fr; 
+      gap: 0px 0px; 
+      grid-template-areas: 
+        "grid-6 grid-5"
+        "grid-7 grid-4"
+        "grid-8 grid-3"
+        "grid-1 grid-2";
+
+    }
+
+    #paper-phone > * {
+      width: 100%;
+      height: 100%;
+    }
+
+    .grid-1 { grid-area: grid-1; }
+    .grid-2 { grid-area: grid-2; }
+    .grid-3 { grid-area: grid-3; }
+    .grid-4 { grid-area: grid-4; }
+    .grid-5 { grid-area: grid-5; }
+    .grid-6 { grid-area: grid-6; }
+    .grid-7 { grid-area: grid-7; }
+    .grid-8 { grid-area: grid-8; }
+
+    .content {
+      margin: 0;
+      width: min-content;
+      height: min-content;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+    }
+
+    .rotate-right {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .rotate-left {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+</style>
+
+<article id="paper-phone-info">
+  <div class="subtitle">zine</div>
+  <div class="body">
+    this is essentially just a tiny book.
+  </div>
+</article>
+
+<div id="paper-phone">
+  <div class="grid-6">
+    <div class="content rotate-right">6</div>
+  </div>
+  <div class="grid-5">
+    <div class="content rotate-left">5</div>
+  </div>
+  <div class="grid-7">
+    <div class="content rotate-right">7</div>
+  </div>
+  <div class="grid-4">
+    <div class="content rotate-left">4</div>
+  </div>
+  <div class="grid-8">
+    <div class="content rotate-right">8</div>
+  </div>
+  <div class="grid-3">
+    <div class="content rotate-left">3</div>
+  </div>
+  <div class="grid-1">
+    <div class="content rotate-right">
+      <span style="font-size: 3rem; font-weight: bold;">{ date }</span>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="content rotate-left">2</div>
+  </div>
+</div>
