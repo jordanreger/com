@@ -13,15 +13,15 @@ active = "wiki/software/wasm/hello world"
   <script>
     const memory = new WebAssembly.Memory({ initial: 1 });
 
-    const importObject = {
+    const import_object = {
       js: {
         memory: memory
       }
     };
 
-    WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), importObject)
+    WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), import_object)
     .then(obj => {
-      let string = new Uint32Array(obj.instance.exports.memory.buffer);
+      let string = new Uint8Array(obj.instance.exports.memory.buffer);
       const decoder = new TextDecoder();
       string = decoder.decode(string).substring(0, 12);
       
@@ -51,13 +51,13 @@ active = "wiki/software/wasm/hello world"
 <pre>
 const memory = new WebAssembly.Memory({ initial: 1 });
 
-const importObject = {
+const import_object = {
   js: {
     memory: memory
   }
 };
 
-WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), importObject)
+WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), import_object)
 .then(obj => {
   let string = new Uint32Array(obj.instance.exports.memory.buffer);
   const decoder = new TextDecoder();

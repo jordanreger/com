@@ -1,0 +1,79 @@
+---
+title = "wasm fetch"
+description = ""
+links = "wiki.software.wasm"
+active = "wiki/software/wasm/fetch"
+---
+
+<article>
+  <div class="subtitle">wasm fetch</div>
+  <div class="body">
+    please open the console to see the output.
+  </div>
+  <script>
+    let memory = new WebAssembly.Memory({ initial: 1 });
+
+    const import_object = {
+      js: {
+        memory: memory,
+        fetch(start, length) {
+          let url = new Uint8Array(memory, start, length);
+          const decoder = new TextDecoder();
+          url = decoder.decode(url);
+          window.fetch(url, { mode: "same-origin" }).then(res => res.text()).then(res => { console.log(res) })
+        }
+      }
+    };
+
+    WebAssembly.instantiateStreaming(fetch("/resources/fetch.wasm"), import_object)
+    .then(obj => {
+      const fetch = obj.instance.exports.fetch;
+      memory = obj.instance.exports.memory.buffer;
+      
+      fetch();
+    });
+  </script>
+  <br/>
+  <br/>
+  <b>fetch.wat</b>
+  <br/>
+  <pre>
+(module
+  (import "js" "fetch" (func $fetch (param $start i32) (param $length i32)))
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (data (i32.const 0) "/resources/fetch.txt")
+
+  (func (export "fetch")
+    i32.const 0
+    i32.const 20
+    call $fetch
+  )
+)</pre>
+  <br/>
+  <br/>
+  <b>script tag</b>
+<pre>
+let memory = new WebAssembly.Memory({ initial: 1 });
+
+const import_object = {
+  js: {
+    memory: memory,
+    fetch(start, length) {
+      let url = new Uint8Array(memory, start, length);
+      const decoder = new TextDecoder();
+      url = decoder.decode(url);
+      window.fetch(url, { mode: "same-origin" }).then(res => res.text()).then(res => { console.log(res) })
+    }
+  }
+};
+
+WebAssembly.instantiateStreaming(fetch("/resources/fetch.wasm"), import_object)
+.then(obj => {
+  const fetch = obj.instance.exports.fetch;
+  memory = obj.instance.exports.memory.buffer;
+  
+  fetch();
+});</pre>
+</article>
