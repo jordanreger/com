@@ -135,6 +135,14 @@ getFiles(`links`).forEach(file => {
 
 try { Deno.readDirSync(`build${slash}resources`) } catch(_) { Deno.mkdirSync(`build${slash}resources`) }
 getFiles(`resources`).forEach(file => {
-  const build_file = file.replace(`resources${slash}`, `build${slash}resources${slash}`);
+  if(!file.includes("inter")) {
+    const build_file = file.replace(`resources${slash}`, `build${slash}resources${slash}`);
+    Deno.copyFileSync(file, build_file);
+  }
+});
+
+try { Deno.readDirSync(`build${slash}resources${slash}inter`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}inter`) }
+getFiles(`resources${slash}inter`).forEach(file => {
+  const build_file = file.replace(`resources${slash}inter${slash}`, `build${slash}resources${slash}inter${slash}`);
   Deno.copyFileSync(file, build_file);
 });
