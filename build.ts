@@ -28,12 +28,6 @@ function getDirs(path: string) {
   return dirs;
 }
 
-/* removes original path and makes the directory in the build path (if it doesn't already exist) */
-getDirs(path).forEach(dir => {
-  dir = dir.replace(`site${slash}`, "");
-  try { Deno.readDirSync(join(build, dir)) } catch(_) { Deno.mkdirSync(join(build, dir)) }
-});
-
 /* copies all original files to their respective folders */
 function getFiles(path: string) {
   const files: string[] = [];
@@ -52,7 +46,7 @@ function getFiles(path: string) {
 
 /* deals with the templating and the frontmatter of each page */
 function templating(src: string, file: string) {
-  const template = Deno.readTextFileSync(`site${slash}template.html`);
+  const template = Deno.readTextFileSync(`resources${slash}template.html`);
   let frontmatter = src.match(/---(.*?)---/gmis);
 
   /* replaces body of template with file */
@@ -105,23 +99,15 @@ function templating(src: string, file: string) {
   return src;
 }
 
-/* writes the original content to the build files */
-getFiles(path).forEach(file => {
-  if(file.includes(".html") || file.includes(".css") || file.includes(".txt")){
-    if(file !== `site${slash}template.html` && !file.includes("links.html")) {
-      let contents = Deno.readTextFileSync(file);
-      file = file.replace(`site${slash}`, "");
-      if(!file.includes(".css") && !file.includes(".txt")){
-        contents = templating(contents, file);
-      }
-      
-      file = `build${slash}` + file;
-      Deno.writeTextFileSync(file, contents);
-
-    } else {
-      file = file.replace(`site${slash}`, "");
-    }
-  }  else {
+try { Deno.readDirSync(`build${slash}site`) } catch(_) { Deno.mkdirSync(`build${slash}site`) }
+getFiles(`site`).forEach(file => {
+  if(!file.includes("robots.txt")) {
+    let contents = Deno.readTextFileSync(file);
+    file = file.replace(`site${slash}`, "");
+    contents = templating(contents, file);
+    file = `build${slash}` + file;
+    Deno.writeTextFileSync(file, contents);
+  } else {
     const build_file = file.replace(`site${slash}`, `build${slash}`);
     Deno.copyFileSync(file, build_file);
   }
@@ -135,14 +121,14 @@ getFiles(`links`).forEach(file => {
 
 try { Deno.readDirSync(`build${slash}resources`) } catch(_) { Deno.mkdirSync(`build${slash}resources`) }
 getFiles(`resources`).forEach(file => {
-  if(!file.includes("inter")) {
+  if(!file.includes("fonts")) {
     const build_file = file.replace(`resources${slash}`, `build${slash}resources${slash}`);
     Deno.copyFileSync(file, build_file);
   }
 });
 
-try { Deno.readDirSync(`build${slash}resources${slash}inter`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}inter`) }
-getFiles(`resources${slash}inter`).forEach(file => {
-  const build_file = file.replace(`resources${slash}inter${slash}`, `build${slash}resources${slash}inter${slash}`);
+try { Deno.readDirSync(`build${slash}resources${slash}fonts`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}fonts`) }
+getFiles(`resources${slash}fonts`).forEach(file => {
+  const build_file = file.replace(`resources${slash}fonts${slash}`, `build${slash}resources${slash}fonts${slash}`);
   Deno.copyFileSync(file, build_file);
 });

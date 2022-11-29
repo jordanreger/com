@@ -8,36 +8,61 @@ active = "wiki/software/wasm/fetch"
 <article>
   <div class="subtitle">wasm fetch</div>
   <div class="body">
-    please open the console to see the output.
-  </div>
-  <script>
-    let memory = new WebAssembly.Memory({ initial: 1 });
+    output: <wasm-output></wasm-output><noscript>please enable javascript to see the output.</noscript>
+    <script type="module">
+      let memory = new WebAssembly.Memory({ initial: 1 });
+      let string;
 
-    const import_object = {
-      js: {
-        memory: memory,
-        fetch(start, length) {
-          let url = new Uint8Array(memory, start, length);
-          const decoder = new TextDecoder();
-          url = decoder.decode(url);
-          window.fetch(url, { mode: "same-origin" }).then(res => res.text()).then(res => { console.log(res) })
+      const import_object = {
+        js: {
+          memory: memory,
+          fetch(start, length) {
+            let url = new Uint8Array(memory, start, length);
+            const decoder = new TextDecoder();
+            url = decoder.decode(url);
+            string = window.fetch(url, { mode: "same-origin" }).then(res => res.text())
+          }
         }
-      }
-    };
+      };
 
-    WebAssembly.instantiateStreaming(fetch("/resources/fetch.wasm"), import_object)
-    .then(obj => {
-      const fetch = obj.instance.exports.fetch;
-      memory = obj.instance.exports.memory.buffer;
-      
-      fetch();
-    });
-  </script>
-  <br/>
-  <br/>
-  <b>fetch.wat</b>
-  <br/>
-  <pre>
+      WebAssembly.instantiateStreaming(fetch("/resources/fetch.wasm"), import_object)
+      .then(obj => {
+        const fetch = obj.instance.exports.fetch;
+        memory = obj.instance.exports.memory.buffer;
+        
+        fetch();
+      });
+
+      let LitElement, html, css, until;
+      import("https://esm.sh/lit/directives/until").then(ex => {
+        until = ex.until;
+      }).then(() => {
+      import("https://esm.sh/lit").then(ex => {
+        LitElement = ex.LitElement, html = ex.html, css = ex.css;
+
+        class wasm_output extends LitElement {
+          static styles = css`
+          code {
+            font-family: Jetbrains Mono, monospace;
+          }
+          `;
+
+          render() {
+            return html`
+              <code>${until(string, "")}</code>
+            `;
+          }
+        }
+
+        customElements.get("wasm-output") || customElements.define("wasm-output", wasm_output);
+      })
+      })
+    </script>
+    <br/>
+    <br/>
+    <b>fetch.wat</b>
+    <br/>
+    <pre>
 (module
   (import "js" "fetch" (func $fetch (param $start i32) (param $length i32)))
   (memory $memory 1)
@@ -51,10 +76,10 @@ active = "wiki/software/wasm/fetch"
     call $fetch
   )
 )</pre>
-  <br/>
-  <br/>
-  <b>script tag</b>
-<pre>
+    <br/>
+    <br/>
+    <b>script tag</b>
+    <pre>
 let memory = new WebAssembly.Memory({ initial: 1 });
 
 const import_object = {
@@ -76,4 +101,5 @@ WebAssembly.instantiateStreaming(fetch("/resources/fetch.wasm"), import_object)
   
   fetch();
 });</pre>
+  </div>
 </article>

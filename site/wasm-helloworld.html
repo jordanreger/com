@@ -8,31 +8,54 @@ active = "wiki/software/wasm/hello world"
 <article>
   <div class="subtitle">wasm hello world program</div>
   <div class="body">
-    please open the console to see the output.
-  </div>
-  <script>
-    const memory = new WebAssembly.Memory({ initial: 1 });
+    output: <wasm-output></wasm-output><noscript>please enable javascript to see the output.</noscript>
+    <script type="module">
+      let memory = new WebAssembly.Memory({ initial: 1 });
+      let string;
 
-    const import_object = {
-      js: {
-        memory: memory
-      }
-    };
+      const import_object = {
+        js: {
+          memory: memory
+        }
+      };
 
-    WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), import_object)
-    .then(obj => {
-      let string = new Uint8Array(obj.instance.exports.memory.buffer);
-      const decoder = new TextDecoder();
-      string = decoder.decode(string).substring(0, 12);
-      
-      console.log(string);
-    });
-  </script>
-  <br/>
-  <br/>
-  <b>string.wat</b>
-  <br/>
-  <pre>
+      WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), import_object)
+      .then(obj => {
+        string = new Uint8Array(obj.instance.exports.memory.buffer);
+        const decoder = new TextDecoder();
+        string = decoder.decode(string).substring(0, 12);
+      });
+
+      let LitElement, html, css, until;
+      import("https://esm.sh/lit/directives/until").then(ex => {
+        until = ex.until;
+      }).then(() => {
+      import("https://esm.sh/lit").then(ex => {
+        LitElement = ex.LitElement, html = ex.html, css = ex.css;
+
+        class wasm_output extends LitElement {
+          static styles = css`
+          code {
+            font-family: Jetbrains Mono, monospace;
+          }
+          `;
+
+          render() {
+            return html`
+              <code>${until(string, "")}</code>
+            `;
+          }
+        }
+
+        customElements.get("wasm-output") || customElements.define("wasm-output", wasm_output);
+      })
+      })
+    </script>
+    <br/>
+    <br/>
+    <b>string.wat</b>
+    <br/>
+    <pre>
 (module
   (memory $memory 1)
   (export "memory" (memory $memory))
@@ -45,9 +68,9 @@ active = "wiki/software/wasm/hello world"
     i32.store
   )
 )</pre>
-  <br/>
-  <br/>
-  <b>script tag</b>
+    <br/>
+    <br/>
+    <b>script tag</b>
 <pre>
 const memory = new WebAssembly.Memory({ initial: 1 });
 
@@ -64,6 +87,6 @@ WebAssembly.instantiateStreaming(fetch("/resources/string.wasm"), import_object)
   string = decoder.decode(string).substring(0, 12);
   
   console.log(string);
-});
-</pre>
+});</pre>
+  </div>
 </article>
