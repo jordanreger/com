@@ -101,7 +101,7 @@ function templating(src: string, file: string) {
 
 try { Deno.readDirSync(`build${slash}site`) } catch(_) { Deno.mkdirSync(`build${slash}site`) }
 getFiles(`site`).forEach(file => {
-  if(!file.includes("robots.txt")) {
+  if(!file.includes("robots.txt") && !file.includes("main.webmanifest") && !file.includes("worker.js")) {
     let contents = Deno.readTextFileSync(file);
     file = file.replace(`site${slash}`, "");
     contents = templating(contents, file);

@@ -1,0 +1,18 @@
+{
+  "short_name": "jordanreger.com",
+  "name": "jordan reger",
+  "icons": [
+    {
+      "src": "/resources/gitsmono.png",
+      "type": "image/png",
+      "sizes": "1064x1064"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "#000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFF",
+  "description": "jordan's website"
+}
