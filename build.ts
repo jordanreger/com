@@ -28,6 +28,8 @@ function getDirs(path: string) {
   return dirs;
 }
 
+const cache_files = [];
+
 /* copies all original files to their respective folders */
 function getFiles(path: string) {
   const files: string[] = [];
@@ -37,6 +39,9 @@ function getFiles(path: string) {
         get_files(join(path, dirEntry.name));
       } else if (dirEntry.isFile) {
         files.push(join(path, dirEntry.name));
+        if(!join(path, dirEntry.name).includes("links") && !join(path, dirEntry.name).includes("resources/fonts")) {
+          cache_files.push(join(path, dirEntry.name));
+        }
       }
     }
   };
@@ -129,6 +134,17 @@ getFiles(`resources`).forEach(file => {
 
 try { Deno.readDirSync(`build${slash}resources${slash}fonts`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}fonts`) }
 getFiles(`resources${slash}fonts`).forEach(file => {
+  cache_files.push(join(path, file));
   const build_file = file.replace(`resources${slash}fonts${slash}`, `build${slash}resources${slash}fonts${slash}`);
   Deno.copyFileSync(file, build_file);
 });
+
+cache_files.forEach((file, index) => {
+  if(file.includes("site")) {
+    cache_files[index] = file.replace("site", "");
+  }
+})
+
+let worker = Deno.readTextFileSync(`build${slash}worker.js`);
+worker = worker.replace("{ urlsToCache }", JSON.stringify(cache_files));
+worker = Deno.writeTextFileSync(`build${slash}worker.js`, worker);

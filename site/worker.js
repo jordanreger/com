@@ -1,5 +1,5 @@
 let CACHE_NAME = "jordanreger.com";
-let urlsToCache = ["/"];
+let urlsToCache = { urlsToCache };
 
 // Install a service worker
 self.addEventListener("install", (event) => {
