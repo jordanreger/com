@@ -8,10 +8,9 @@ active = "wiki/software/wasm/fetch"
 <article>
   <div class="subtitle">wasm fetch</div>
   <div class="body">
-    output: <wasm-output></wasm-output><noscript>please enable javascript to see the output.</noscript>
-    <script type="module">
+    see console for output.
+    <script>
       let memory = new WebAssembly.Memory({ initial: 1 });
-      let string;
 
       const import_object = {
         js: {
@@ -20,7 +19,7 @@ active = "wiki/software/wasm/fetch"
             let url = new Uint8Array(memory, start, length);
             const decoder = new TextDecoder();
             url = decoder.decode(url);
-            string = window.fetch(url, { mode: "same-origin" }).then(res => res.text())
+            window.fetch(url, { mode: "same-origin" }).then(res => res.text()).then(res => { console.log(res) })
           }
         }
       };
@@ -32,31 +31,6 @@ active = "wiki/software/wasm/fetch"
         
         fetch();
       });
-
-      let LitElement, html, css, until;
-      import("https://esm.sh/lit/directives/until").then(ex => {
-        until = ex.until;
-      }).then(() => {
-      import("https://esm.sh/lit").then(ex => {
-        LitElement = ex.LitElement, html = ex.html, css = ex.css;
-
-        class wasm_output extends LitElement {
-          static styles = css`
-          code {
-            font-family: Jetbrains Mono, monospace;
-          }
-          `;
-
-          render() {
-            return html`
-              <code>${until(string, "")}</code>
-            `;
-          }
-        }
-
-        customElements.get("wasm-output") || customElements.define("wasm-output", wasm_output);
-      })
-      })
     </script>
     <br/>
     <br/>
