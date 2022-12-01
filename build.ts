@@ -1,34 +1,16 @@
-const path = "./site", build = "./build";
-let slash = "/";
-
+// deno-lint-ignore-file no-explicit-any
 import { join } from "https://deno.land/std@0.165.0/path/mod.ts";
 import { parse } from "https://deno.land/std@0.165.0/encoding/toml.ts";
 
-// checks if build directory exists. if not, make it!
-try { Deno.readDirSync(build) } catch(_) { Deno.mkdirSync(build) }
-
+let slash: string;
 if(Deno.build.os === "windows") {
   slash = "\\";
+} else {
+  slash = "/";
 }
 
-/* returns a list of all directories in the original path to make in the build path */
-function getDirs(path: string) {
-  const dirs: string[] = [];
-  const get_dir = (path: string) => {
-    for (const dirEntry of Deno.readDirSync(path)) {
-      if (dirEntry.isFile) {
-        continue;
-      } else if (dirEntry.isDirectory) {
-        dirs.push(join(path, dirEntry.name));
-        get_dir(join(path, dirEntry.name));
-      }
-    }
-  };
-  get_dir(path);
-  return dirs;
-}
-
-const cache_files = [];
+// checks if build directory exists. if not, make it!
+try { Deno.readDirSync(`.${slash}build`) } catch(_) { Deno.mkdirSync(`.${slash}build`) }
 
 /* copies all original files to their respective folders */
 function getFiles(path: string) {
@@ -39,9 +21,6 @@ function getFiles(path: string) {
         get_files(join(path, dirEntry.name));
       } else if (dirEntry.isFile) {
         files.push(join(path, dirEntry.name));
-        if(!join(path, dirEntry.name).includes("links") && !join(path, dirEntry.name).includes("resources/fonts")) {
-          cache_files.push(join(path, dirEntry.name));
-        }
       }
     }
   };
@@ -50,16 +29,34 @@ function getFiles(path: string) {
 }
 
 /* deals with the templating and the frontmatter of each page */
+function get0x7d0date() {
+  function pad(n: number) {
+    return (n < 10) ? ("0" + n) : n;
+  }
+
+  const now: Date = new Date();
+  const this_year: Date = new Date(now.getFullYear(), 0, 0);
+  const year = now.getFullYear() - 2000;
+  const day_of_year = Math.floor((now.valueOf() - this_year.valueOf()) / 1000 / 60 / 60 / 24) - 1;
+  const month_number = Math.floor((day_of_year) / 14);
+  const month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
+  const day = day_of_year - (month_number * 14);
+
+  const arvelie_date = `${pad(year)}${month}${pad(day)}`;
+  return arvelie_date;
+}
+
 function templating(src: string, file: string) {
   const template = Deno.readTextFileSync(`resources${slash}template.html`);
-  let frontmatter = src.match(/---(.*?)---/gmis);
+  let frontmatter: any;
+  frontmatter = src.match(/---(.*?)---/gmis);
 
   /* replaces body of template with file */
   src = template.replace("{ body }", src);
   if(frontmatter) {
     frontmatter = frontmatter[0];
     src = src.replaceAll(frontmatter, "");
-    frontmatter = frontmatter.replaceAll("---", "");
+    frontmatter = frontmatter?.replaceAll("---", "");
     /* parses it into toml */
     frontmatter = parse(frontmatter);
 
@@ -69,8 +66,8 @@ function templating(src: string, file: string) {
     const links_path = frontmatter.links.replaceAll(".", "-") + "_links.html";
     let links_content = Deno.readTextFileSync(`.${slash}links${slash}${links_path}`);
 
-    let match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
-    let active_path = frontmatter.active.split("/");
+    const match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
+    const active_path = frontmatter.active.split("/");
     match?.forEach(match => {
       for(const path of active_path){
         if(match.includes(">" + path + "<")) {
@@ -78,21 +75,6 @@ function templating(src: string, file: string) {
         }
       }
     })
-    function get0x7d0date() {
-      function pad(n) {
-        return (n < 10) ? ("0" + n) : n;
-      }
-
-      var now = new Date();
-      var year = now.getFullYear() - 2000;
-      var day_of_year = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24) - 1;
-      var month_number = Math.floor((day_of_year) / 14);
-      var month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
-      var day = day_of_year - (month_number * 14);
-
-      var arvelie_date = `${pad(year)}${month}${pad(day)}`;
-      return arvelie_date;
-    }
     
     src = src.replaceAll("{ links }", links_content);
 
@@ -104,9 +86,8 @@ function templating(src: string, file: string) {
   return src;
 }
 
-try { Deno.readDirSync(`build${slash}site`) } catch(_) { Deno.mkdirSync(`build${slash}site`) }
 getFiles(`site`).forEach(file => {
-  if(!file.includes("robots.txt") && !file.includes("main.webmanifest") && !file.includes("worker.js")) {
+  if(!file.includes("robots.txt")) {
     let contents = Deno.readTextFileSync(file);
     file = file.replace(`site${slash}`, "");
     contents = templating(contents, file);
@@ -134,17 +115,6 @@ getFiles(`resources`).forEach(file => {
 
 try { Deno.readDirSync(`build${slash}resources${slash}fonts`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}fonts`) }
 getFiles(`resources${slash}fonts`).forEach(file => {
-  cache_files.push(join(path, file));
   const build_file = file.replace(`resources${slash}fonts${slash}`, `build${slash}resources${slash}fonts${slash}`);
   Deno.copyFileSync(file, build_file);
 });
-
-cache_files.forEach((file, index) => {
-  if(file.includes("site")) {
-    cache_files[index] = file.replace("site", "");
-  }
-})
-
-let worker = Deno.readTextFileSync(`build${slash}worker.js`);
-worker = worker.replace("{ urlsToCache }", JSON.stringify(cache_files));
-worker = Deno.writeTextFileSync(`build${slash}worker.js`, worker);
