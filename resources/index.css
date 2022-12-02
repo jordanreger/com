@@ -13,7 +13,7 @@ br {
 }
 
 pre {
-  padding: 1vw 1vh;
+  padding: 1rem 1rem;
   border: 1px solid black;
   overflow-x: auto;
   margin: 0;
@@ -51,9 +51,9 @@ td {
   color: #212121;
 }
 
-img {
+img:not(footer > a > img) {
   user-select: none;
-  max-height: 25vh;
+  max-height: 25rem;
 	max-width: 65%;
   filter: grayscale(100%);
 }
@@ -75,21 +75,23 @@ html {
 }
 
 main {
-  margin-top: 2vh;
-  padding-bottom: 10vh;
-}
-
-#logo {
-  max-height: 15vh;
+  margin-top: 2rem;
+  padding-bottom: 10rem;
 }
 
 header {
-  padding-bottom: 2vh;
+  padding-bottom: 2rem;
   display: flex;
+  align-items: flex-start;
 }
 
 header a {
   text-decoration: none;
+}
+
+#logo {
+  max-width: 6.5rem;
+  margin-right: 1rem;
 }
 
 header nav {
@@ -100,32 +102,57 @@ header nav {
 header ul {
   list-style: none;
   padding-inline-start: 0;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 footer {
   position: absolute;
-  bottom: 2vh;
-  right: 2vw;
+  width: auto;
+  height: auto;
+  bottom: 1rem;
+  right: 1rem;
   display: flex;
-  align-items:center;
-  text-align: right;
+  align-items: center;
+  vertical-align: middle;
 }
 
 footer > * {
-  margin-left: 1vw;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 50%;
 }
 
-footer img {
-  height: 3vh;
+footer > a {
+  width: min-content;
+  height: min-content;
+  text-align: right;
+}
+
+footer > a > img {
+  user-select: none;
+  filter: grayscale(100%);
+}
+
+#webring {
+  height: 2rem;
+}
+
+#sourcehut {
+  width: auto;
+  height: 1.5rem;
+}
+
+#mastodon {
+  width: auto;
+  height: 1.5rem;
 }
 
 article:not(:last-of-type) {
-  padding-bottom: 2vh;
+  padding-bottom: 2rem;
 }
 
 article:not(:first-of-type) {
-  padding-top: 2vh;
+  padding-top: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6, .subtitle {
@@ -133,7 +160,7 @@ h1, h2, h3, h4, h5, h6, .subtitle {
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 1vh;
+  padding-bottom: 1rem;
 }
 
 .accent {
@@ -163,7 +190,7 @@ h1, h2, h3, h4, h5, h6, .subtitle {
 
   .print-calendar .column-1 {
     width: min-content;
-    padding-right: 1vw;
+    padding-right: 1rem;
   }
 
   header, footer, #leap-year, #non-print-header {
