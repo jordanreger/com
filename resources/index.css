@@ -133,6 +133,11 @@ footer > a > img {
   filter: grayscale(100%);
 }
 
+#libre {
+  width: auto;
+  height: 1.5rem;
+}
+
 #webring {
   height: 2rem;
 }
