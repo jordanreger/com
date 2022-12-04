@@ -50,11 +50,10 @@ function templating(src: string, file: string) {
   const template = Deno.readTextFileSync(`resources${slash}template.html`);
   let frontmatter: any;
   frontmatter = src.match(/---(.*?)---/gmis);
-
-  /* replaces body of template with file */
-  src = template.replace("{ body }", src);
-  if(frontmatter) {
-    frontmatter = frontmatter[0];
+  frontmatter = frontmatter[0];
+  
+  if(!frontmatter.includes("template = false")) {
+    src = template.replace("{ body }", src);
     src = src.replaceAll(frontmatter, "");
     frontmatter = frontmatter?.replaceAll("---", "");
     /* parses it into toml */
@@ -81,6 +80,9 @@ function templating(src: string, file: string) {
     src = src.replaceAll("{ source link }", `https://git.sr.ht/~jordanreger/com/tree/main/item/site/${file}`);
 
     src = src.replaceAll("{ date }", get0x7d0date());
+  } else {
+    src = src.replaceAll(frontmatter, "");
+    frontmatter = frontmatter?.replaceAll("---", "");
   }
   
   return src;
