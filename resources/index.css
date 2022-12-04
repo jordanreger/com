@@ -75,14 +75,7 @@ html {
 }
 
 main {
-  margin-top: 2rem;
   padding-bottom: 10rem;
-}
-
-header {
-  padding-bottom: 2rem;
-  display: flex;
-  align-items: flex-start;
 }
 
 header a {
@@ -105,6 +98,10 @@ header ul {
   list-style: none;
   padding-inline-start: 0;
   padding-right: 1rem;
+}
+
+header hr {
+  margin-bottom: 2rem;
 }
 
 footer {
