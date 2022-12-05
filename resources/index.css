@@ -50,7 +50,7 @@ td {
   color: #fff;
 }
 
-img:not(footer > a > img) {
+img:not(footer > .right > a > img) {
   user-select: none;
   max-height: 25rem;
 	max-width: 65%;
@@ -107,28 +107,32 @@ header hr {
 
 footer {
   position: absolute;
-  width: auto;
   height: auto;
   bottom: 1rem;
-  right: 1rem;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
+  margin: auto;
+  width: calc(100% - 20px);
 }
 
-footer > * {
-  margin-left: 0.5rem;
-  position: relative;
-  top: 50%;
-}
-
-footer > a {
+footer > .right > a {
   width: min-content;
   height: min-content;
-  text-align: right;
+  text-decoration: none;
 }
 
-footer > a > img {
+footer .left {
+  position: relative;
+  top: 50%;
+  float: left;
+}
+
+footer .right {
+  position: relative;
+  top: 50%;
+  float: right;
+}
+
+footer > .right > a > img {
+  text-decoration: none;
   filter: brightness(0) invert(1);
 }
 
