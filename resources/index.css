@@ -138,21 +138,17 @@ footer > .right > a > img {
 
 #libre {
   width: auto;
-  height: 1.5rem;
-}
-
-#webring {
-  height: 2rem;
+  height: 1rem;
 }
 
 #sourcehut {
   width: auto;
-  height: 1.5rem;
+  height: 1rem;
 }
 
 #mastodon {
   width: auto;
-  height: 1.5rem;
+  height: 1rem;
 }
 
 article:not(:last-of-type) {
@@ -171,6 +167,7 @@ h1, h2, h3, h4, h5, h6, .subtitle {
   padding-bottom: 1rem;
   font-variant: small-caps;
   color: #fff;
+  text-decoration: none;
 }
 
 .accent {
