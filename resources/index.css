@@ -1,11 +1,11 @@
 ::-moz-selection {
-  color: #FFF;
-  background: #000;
+  color: #212121;
+  background: #fff;
 }
 
 ::selection {
-  color: #FFF;
-  background: #000;
+  color: #212121;
+  background: #fff;
 }
 
 br {
@@ -14,22 +14,22 @@ br {
 
 pre {
   padding: 1rem 1rem;
-  border: 1px solid black;
+  border: 1px solid #fff;
   overflow-x: auto;
   margin: 0;
-  font-family: Jetbrains Mono, monospace;
+  font-family: inherit;
   font-size: 0.8rem;
 }
 
 code {
-  font-family: Jetbrains Mono, monospace;
+  font-family: inherit;
   font-size: 0.8rem;
 }
 
 hr {
   border: none;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
 }
 
 table {
@@ -38,8 +38,7 @@ table {
 }
 
 table, th, td { 
-  border: 1px solid black;
-  font-family: Jetbrains Mono, monospace;
+  border: 1px solid #fff;
   font-size: 0.8rem;
 }
 
@@ -48,7 +47,7 @@ th, td {
 }
 
 td {
-  color: #212121;
+  color: #fff;
 }
 
 img:not(footer > a > img) {
@@ -59,7 +58,7 @@ img:not(footer > a > img) {
 }
 
 a {
-  color: inherit;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -71,22 +70,24 @@ html {
   width: 100%;
   position: relative;
   min-height: 100%;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  background-color: #212121;
+  color: #e0e0e0;
 }
 
 main {
-  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+}
+
+header {
+  margin-bottom: 2rem;
 }
 
 header a {
   text-decoration: none;
-}
-
-#logo {
-  font-weight: bold;
-  font-size: 2.25rem;
-  margin-right: 1rem;
-  text-align: right;
+  color: #fff;
 }
 
 header nav {
@@ -128,8 +129,7 @@ footer > a {
 }
 
 footer > a > img {
-  user-select: none;
-  filter: grayscale(100%);
+  filter: brightness(0) invert(1);
 }
 
 #libre {
@@ -165,6 +165,8 @@ h1, h2, h3, h4, h5, h6, .subtitle {
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 1rem;
+  font-variant: small-caps;
+  color: #fff;
 }
 
 .accent {
@@ -183,8 +185,30 @@ h1, h2, h3, h4, h5, h6, .subtitle {
 }
 
 @media print {
+  html {
+    color: #000;
+  }
+
   img {
     display: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+  }
+  
+  table, th, td { 
+    border: 1px solid #000;
+    font-size: 0.8rem;
+  }
+  
+  th, td {
+    text-align: center;
+  }
+  
+  td {
+    color: #000;
   }
   
   .print-calendar {
