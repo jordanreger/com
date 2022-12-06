@@ -70,14 +70,14 @@ h1, h2, h3, h4, h5, h6, .subtitle {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding-bottom: 1rem;
   color: #fff;
   text-decoration: none;
 }
 
 header, footer, .body {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 html {
@@ -148,7 +148,7 @@ footer > .right > a > img {
   text-decoration: none;
   filter: brightness(0) invert(1);
   width: auto;
-  height: 1.5rem;
+  height: 1.25rem;
 }
 
 article:not(:last-of-type) {
