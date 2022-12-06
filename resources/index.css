@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, .subtitle {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   padding-bottom: 1rem;
   color: #fff;
   text-decoration: none;
@@ -144,13 +144,6 @@ footer > .right > a {
   text-decoration: none;
 }
 
-footer > .right > a > img {
-  text-decoration: none;
-  filter: brightness(0) invert(1);
-  width: auto;
-  height: 1.25rem;
-}
-
 article:not(:last-of-type) {
   padding-bottom: 2rem;
 }
@@ -163,13 +156,13 @@ article:not(:first-of-type) {
   font-weight: bold;
 }
 
+/* https://feeds.land, https://crate.land */
 .title {
   border: none;
   user-select: none;
   font-size: 0.65rem;
 }
 
-/* https://feeds.land */
 .delete:hover {
   cursor: pointer;
 }

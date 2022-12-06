@@ -115,8 +115,8 @@ getFiles(`resources`).forEach(file => {
   }
 });
 
-try { Deno.readDirSync(`build${slash}resources${slash}fonts`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}fonts`) }
+/*try { Deno.readDirSync(`build${slash}resources${slash}fonts`) } catch(_) { Deno.mkdirSync(`build${slash}resources${slash}fonts`) }
 getFiles(`resources${slash}fonts`).forEach(file => {
   const build_file = file.replace(`resources${slash}fonts${slash}`, `build${slash}resources${slash}fonts${slash}`);
   Deno.copyFileSync(file, build_file);
-});
+});*/
