@@ -66,12 +66,25 @@ a:hover {
   cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6, .subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header, footer, .body {
+  font-size: 1.25rem;
+}
+
 html {
   width: 100%;
   position: relative;
   min-height: 100%;
   font-family: monospace;
-  font-size: 1.25rem;
   letter-spacing: 0.02rem;
   background-color: #212121;
   color: #e0e0e0;
@@ -113,12 +126,6 @@ footer {
   width: calc(100% - 20px);
 }
 
-footer > .right > a {
-  width: min-content;
-  height: min-content;
-  text-decoration: none;
-}
-
 footer .left {
   position: relative;
   top: 50%;
@@ -131,24 +138,17 @@ footer .right {
   float: right;
 }
 
+footer > .right > a {
+  width: min-content;
+  height: min-content;
+  text-decoration: none;
+}
+
 footer > .right > a > img {
   text-decoration: none;
   filter: brightness(0) invert(1);
-}
-
-#libre {
   width: auto;
-  height: 1rem;
-}
-
-#sourcehut {
-  width: auto;
-  height: 1rem;
-}
-
-#mastodon {
-  width: auto;
-  height: 1rem;
+  height: 1.5rem;
 }
 
 article:not(:last-of-type) {
@@ -157,17 +157,6 @@ article:not(:last-of-type) {
 
 article:not(:first-of-type) {
   padding-top: 2rem;
-}
-
-h1, h2, h3, h4, h5, h6, .subtitle {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 1rem;
-  font-variant: small-caps;
-  color: #fff;
-  text-decoration: none;
 }
 
 .accent {
