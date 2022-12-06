@@ -89,7 +89,7 @@ function templating(src: string, file: string) {
 }
 
 getFiles(`site`).forEach(file => {
-  if(!file.includes("robots.txt") && !file.includes("key.pub")) {
+  if(!file.includes("robots.txt") && !file.includes("key.asc")) {
     let contents = Deno.readTextFileSync(file);
     file = file.replace(`site${slash}`, "");
     contents = templating(contents, file);
