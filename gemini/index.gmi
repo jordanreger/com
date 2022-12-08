@@ -1,19 +1,21 @@
-```
-      _             __        
-     (_)__  _______/ /__ ____ 
-    / / _ \/ __/ _  / _ `/ _ \
- __/ /\___/_/  \_,_/\_,_/_//_/
-|___/____ ___ ____ ____       
- / __/ -_) _ `/ -_) __/       
-/_/  \__/\_, /\__/_/          
-        /___/
+# Jordan Reger
+
+```                                           _   
+                ,.,                            \/
+                                               ||
+                                          ,___/| \ ____,_
+                                         _____ | |/
+                                              \| | __
+--/'''\-------,_____     __                    | |/       /|_____
+| | || |      |  _  |  \|  |    _              | |      _/ | / \__\
+| | || | :--: | | | |   .--.   : :;/   |---|  /   \     \./___.|__/
 ```
 
 # README
-welcome to my site. this is a more intricate version of my website, which is a collection of knowledge.
+welcome to my site.
 
-=> /about.gmi about me
-=> /now.gmi what's happening now
+=> /about.gmi read about me
+=> /now.gmi see what's happening now
 
 
 view on the web:

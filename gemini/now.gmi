@@ -3,6 +3,34 @@
 # now
 what's happening *now*.
 
+# 22Y04
+* made a sitemap (that looks good!)
+
+=> https://jordanreger.com/sitemap.html
+
+# 22Y03
+* wrote about our futuristic dystopia
+
+=> https://jordanreger.com/dystopia.html our futuristic dystopia
+
+# 22Y02
+* the website looks better
+
+=> https://jordanreger.com jordanreger.com
+
+# 22Y01
+* i realized recently that what i love to do is a lot less art and a lot more (metaphorical) architecture. i find joy in designing and building things that are useful and pretty, not creating pieces of art that are merely for art sake. recently i've been trying to fit into the mould of the artist (even though there isn't one)... i realized that is not who i am. i am not an artist. i am not a poet. i do, however, take pride in artistic and poetic things. i enjoy them like any artist or poet does. architects are this way. in my opinion, useful architecture, while often beautiful, is created with a focus on pragmatism rather than art. i find joy in this.
+
+# 22X09
+* i've been playing around with wasm, uxn, and rsm (page coming soon probably).
+* i've also been progressing through my project management course - i feel like i'm almost ready to take the real certification test. i cannot wait to get a move on... 
+
+=> https://jordanreger.com/wasm.html wasm
+=> https://jordanreger.com/uxn.html uxn
+
+# 22X05
+* posting from alpine linux on an iphone...
+
 # 22X03
 * i lied yesterday - image support did not truly exist, and it's because one tiny little line in my server was stopping all media from being hosted - but only locally and on my backup hosted on deno deploy. so what's going on? what was the little line of code? well, back when i first got into writing webservers i found this one line pretty neat: "let decoder = new TextDecoder('utf-8'); decoder.decode(file_content);" this line stuck from about a year ago until today at about 06:00UTC (01:00EST, where i'm located!!!)...
 * print css!
@@ -14,7 +42,6 @@ what's happening *now*.
 * along with using a custom static site generator, now using an in-depth link system (web)
 * added image support (yes it didn't work previously)
 * added dynamic page source link at bottom of every page (web)
-
 
 # 22X00
 * now using a custom static site generator
