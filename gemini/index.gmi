@@ -1,14 +1,14 @@
 # Jordan Reger
 
 ```                                           _   
-                ,.,                            \/
+                ,.,                            \,---'
                                                ||
-                                          ,___/| \ ____,_
+                                          ,___/|\  ____,
                                          _____ | |/
-                                              \| | __
---/'''\-------,_____     __                    | |/       /|_____
-| | || |      |  _  |  \|  |    _              | |      _/ | / \__\
-| | || | :--: | | | |   .--.   : :;/   |---|  /   \     \./___.|__/
+                                              \| | __      _
+--/'''\-------,_____     __                    | |/       / |________
+| | || |      |  _  |  \|  |    _              | |      _/ _|    /___\
+| | || | :--: | | | |   .--.   : :;/   |---|  /   \     \o/_____|_o_/
 ```
 
 # README
@@ -16,6 +16,18 @@ welcome to my site.
 
 => /about.gmi read about me
 => /now.gmi see what's happening now
+
+# contact
+if you find a social media account with my name on it *not* listed below, chances are it's not mine or i don't use it anymore.
+=> mailto:mail@jordanreger.com email
+=> https://indieweb.social/@jr mastodon
+=> https://twitter.com/jxreger twitter
+=> https://youtube.com/jordanreger youtube
+=> https://linkedin.com/in/jordanreger linkedin
+
+i post my code on the following software forges:
+=> https://sr.ht/~jordanreger sourcehut
+=> https://github.com/~jordanreger github
 
 
 view on the web:
