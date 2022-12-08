@@ -136,7 +136,7 @@ active.forEach(path => {
 })
 
 const longest_str = hierarchy_levels.sort((a, b) => b - a);
-hierarchy = hierarchy + "└" + "──┴".repeat((longest_str[0]));
+hierarchy = hierarchy + "└" + "──┴".repeat(longest_str[0] - 2) + "──┘";
 
 const sitemap = Deno.readTextFileSync(`build${slash}sitemap.html`);
 const sitemap_contents = sitemap.replace("{ sitemap }", hierarchy);

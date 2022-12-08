@@ -7,8 +7,8 @@
                                          _____ | |/
                                               \| | __      _
 --/'''\-------,_____     __                    | |/       / |________
-| | || |      |  _  |  \|  |    _              | |      _/ _|    /___\
-| | || | :--: | | | |   .--.   : :;/   |---|  /   \     \o/_____|_o_/
+| | || |      |  _  |  \|  |    _              | |      _/ _|    _/___\
+| | || | :--: | | | |   .--.   : :;/   |---|  /   \     \o/______|_o_/
 ```
 
 # README
@@ -19,7 +19,7 @@ welcome to my site.
 
 # contact
 if you find a social media account with my name on it *not* listed below, chances are it's not mine or i don't use it anymore.
-=> mailto:mail@jordanreger.com email
+=> mailto:mail@jordanreger.com email (preferred)
 => https://indieweb.social/@jr mastodon
 => https://twitter.com/jxreger twitter
 => https://youtube.com/jordanreger youtube
