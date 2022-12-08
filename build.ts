@@ -46,6 +46,8 @@ function get0x7d0date() {
   return arvelie_date;
 }
 
+let active: string[] = [];
+
 function templating(src: string, file: string) {
   const template = Deno.readTextFileSync(`resources${slash}template.html`);
   let frontmatter: any;
@@ -63,6 +65,7 @@ function templating(src: string, file: string) {
     src = src.replaceAll("{ title }", frontmatter.title);
     src = src.replaceAll("{ description }", frontmatter.description);
     const links_path = frontmatter.links.replaceAll(".", "-") + "_links.html";
+    active.push(frontmatter.active);
     let links_content = Deno.readTextFileSync(`.${slash}links${slash}${links_path}`);
 
     const match = links_content.match(/\<li\>\<a href="(.*?)"\>(.*?)\<\/a\>\<\/li\>/gmis);
@@ -114,3 +117,27 @@ getFiles(`resources`).forEach(file => {
     Deno.copyFileSync(file, build_file);
   }
 });
+
+// sitemap
+active = [...new Set(active)].sort((a, b) => a.localeCompare(b));
+
+let hierarchy = "";
+const hierarchy_levels: number[] = [];
+
+active.forEach(path => {
+  const hierarchy_level = path.split("/").length - 1;
+  hierarchy_levels.push(hierarchy_level);
+  path = path.split("/")[hierarchy_level];
+  if(hierarchy_level === 0) {
+    hierarchy = hierarchy + "├─ " + `<a href="${path.replace(" ", "-")}.html">${path}</a>` + "\n";
+  } else if (hierarchy_level > 0) {
+    hierarchy = hierarchy + "│  ".repeat(hierarchy_level) + "├─ " + `<a href="${path.replaceAll(" ", "-")}.html">${path}</a>` + "\n";
+  }
+})
+
+const longest_str = hierarchy_levels.sort((a, b) => b - a);
+hierarchy = hierarchy + "└" + "──┴".repeat((longest_str[0]));
+
+const sitemap = Deno.readTextFileSync(`build${slash}sitemap.html`);
+const sitemap_contents = sitemap.replace("{ sitemap }", hierarchy);
+Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);

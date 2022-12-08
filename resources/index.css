@@ -18,12 +18,12 @@ pre {
   overflow-x: auto;
   margin: 0;
   font-family: inherit;
-  font-size: 0.8rem;
+  color: #c4c4c4;
 }
 
 code {
   font-family: inherit;
-  font-size: 0.8rem;
+  color: #999999;
 }
 
 hr {
