@@ -1,6 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { join } from "https://deno.land/std@0.165.0/path/mod.ts";
 import { parse } from "https://deno.land/std@0.165.0/encoding/toml.ts";
+import { parseFeed } from "https://deno.land/x/rss/mod.ts";
 
 let slash: string;
 if(Deno.build.os === "windows") {
@@ -141,3 +142,21 @@ hierarchy = hierarchy + "└" + "──┴".repeat(longest_str[0] - 2) + "──
 const sitemap = Deno.readTextFileSync(`build${slash}sitemap.html`);
 const sitemap_contents = sitemap.replace("{ sitemap }", hierarchy);
 Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);
+
+// posts
+async function get_post_feed() {
+  const posts = Deno.readTextFileSync(`build${slash}posts.xml`);
+  const feed = await parseFeed(posts);
+  console.log(feed);
+  let post_feed = `<ul>`;
+  feed.entries.forEach(post => {
+    post_feed = post_feed + `<li id="${post.title?.value}">${post.description?.value}</li>`;
+  });
+
+  post_feed = post_feed + `</ul>`;
+  return post_feed;
+}
+
+const post = Deno.readTextFileSync(`build${slash}posts.html`);
+const post_contents = post.replace("{ posts }", await get_post_feed());
+Deno.writeTextFileSync(`build${slash}posts.html`, post_contents);

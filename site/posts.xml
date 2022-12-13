@@ -4,7 +4,13 @@
 <channel>
   <title>jordanreger</title>
   <link>https://jordanreger.com</link>
+
   <item>
+    <title>1</title>
+    <description>testing 2</description>
+  </item>
+  <item>
+    <title>0</title>
     <description>testing</description>
   </item>
 </channel>
