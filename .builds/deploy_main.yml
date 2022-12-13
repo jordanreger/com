@@ -18,5 +18,5 @@ tasks:
 - upload: |
     acurl -f https://pages.sr.ht/publish/$site \
       -Fcontent=@./com/site.tar.gz
-- POSSE: |
+- posse: |
     curl https://posse-jordanreger.deno.dev/post
