@@ -1,7 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { join } from "https://deno.land/std@0.165.0/path/mod.ts";
 import { parse } from "https://deno.land/std@0.165.0/encoding/toml.ts";
-import { parseFeed } from "https://deno.land/x/rss/mod.ts";
+import { parseFeed } from "https://deno.land/x/rss@0.5.6/mod.ts";
 
 let slash: string;
 if(Deno.build.os === "windows") {
@@ -36,6 +36,23 @@ function get0x7d0date() {
   }
 
   const now: Date = new Date();
+  const this_year: Date = new Date(now.getFullYear(), 0, 0);
+  const year = now.getFullYear() - 2000;
+  const day_of_year = Math.floor((now.valueOf() - this_year.valueOf()) / 1000 / 60 / 60 / 24) - 1;
+  const month_number = Math.floor((day_of_year) / 14);
+  const month = (String.fromCharCode(65 + month_number) === "[") ? "+" : String.fromCharCode(65 + month_number);
+  const day = day_of_year - (month_number * 14);
+
+  const arvelie_date = `${pad(year)}${month}${pad(day)}`;
+  return arvelie_date;
+}
+
+function convertto0x7d0date(date: any) {
+  function pad(n: number) {
+    return (n < 10) ? ("0" + n) : n;
+  }
+
+  const now: Date = new Date(date);
   const this_year: Date = new Date(now.getFullYear(), 0, 0);
   const year = now.getFullYear() - 2000;
   const day_of_year = Math.floor((now.valueOf() - this_year.valueOf()) / 1000 / 60 / 60 / 24) - 1;
@@ -147,10 +164,22 @@ Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);
 async function get_post_feed() {
   const posts = Deno.readTextFileSync(`build${slash}posts.xml`);
   const feed = await parseFeed(posts);
-  console.log(feed);
   let post_feed = `<ul>`;
   feed.entries.forEach(post => {
-    post_feed = post_feed + `<li id="${post.title?.value}">${post.description?.value}</li>`;
+    let post_description = post.description?.value;
+    const links = post_description?.match(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi);
+    if(links){
+      links.forEach(link => {
+        post_description = post_description?.replaceAll(link, `<a href="${link}">${link}</a>`)
+      })
+    }
+    post_feed = post_feed + `
+    <li id="${post.title?.value}">
+      ${post_description}
+      <br/>
+      <code><span title="${post.published}">${convertto0x7d0date(post.published)}</span> &#8212; <a href="#${post.title?.value}">permalink</a></code>
+    </li>
+    <br/>`;
   });
 
   post_feed = post_feed + `</ul>`;

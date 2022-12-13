@@ -8,10 +8,17 @@
   <item>
     <title>1</title>
     <description>posts like these are syndicated (https://indieweb.org/POSSE) via an xml file on my site. i like this quite a lot better than posting on separate platforms.</description>
+    <pubDate>2022-12-13T15:27:00-05:00</pubDate>
+  </item>
+  <item>
+    <title>1</title>
+    <description>posts like these are syndicated (https://indieweb.org/POSSE) via an xml file on my site. i like this quite a lot better than posting on separate platforms.</description>
+    <pubDate>2022-12-13T15:27:00-05:00</pubDate>
   </item>
   <item>
     <title>0</title>
     <description>hello world!</description>
+    <pubDate>2022-12-13T15:00:00-05:00</pubDate>
   </item>
 </channel>
 
