@@ -6,6 +6,11 @@
   <link>https://jordanreger.com</link>
 
   <item>
+    <title>3</title>
+    <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
+    <pubDate>2022-12-13T20:23:00-05:00</pubDate>
+  </item>
+  <item>
     <title>2</title>
     <description>it seems to be working fully... this is a test post https://jordanreger.com</description>
     <pubDate>2022-12-13T16:23:00-05:00</pubDate>
