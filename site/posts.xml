@@ -6,6 +6,11 @@
   <link>https://jordanreger.com</link>
 
   <item>
+    <title>4</title>
+    <description>testing images: https://jordanreger.com/resources/bladerunner2049tree.webp</description>
+    <pubDate>2022-12-13T20:35:00-05:00</pubDate>
+  </item>
+  <item>
     <title>3</title>
     <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
     <pubDate>2022-12-13T20:23:00-05:00</pubDate>
