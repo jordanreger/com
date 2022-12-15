@@ -1,0 +1,29 @@
+image: ubuntu/20.04
+oauth: pages.sr.ht/PAGES:RW
+environment:
+    site: jordanreger.com
+packages:
+    - unzip
+tasks:
+- install-deno: |
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+- build: |
+    cd com
+    DENO_INSTALL="/home/build/.deno"
+    PATH="$DENO_INSTALL/bin:$PATH"
+    deno run -A build.ts
+- package-main: |
+    cd com/build
+    tar -cvz . > ../site.tar.gz
+- upload-main: |
+    acurl -f https://pages.sr.ht/publish/$site \
+      -Fcontent=@./com/site.tar.gz
+- package-gemini: |
+    cd com/gemini
+    tar -cvz . > ../gemini.tar.gz
+- upload-gemini: |
+    acurl -f https://pages.sr.ht/publish/$site \
+      -Fcontent=@./com/gemini.tar.gz \
+      -Fprotocol=GEMINI
+- posse: |
+    curl https://posse.jordanreger.com/post

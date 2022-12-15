@@ -7,6 +7,13 @@ function handler(req: Request): Response {
 
   if(path === "/") {
     return Response.redirect("https://jordanreger.com", 302);
+  } else if(path === route("/p/*")) {
+    const post_number = route("/p/*")?.split("/")[2];
+    if(post_number){
+      return Response.redirect(`https://jordanreger.com/posts.html#${post_number}`, 302);
+    } else {
+      return Response.redirect("https://jordanreger.com/posts.html", 302);
+    }
   } else if(path === route("/post/*")) {
     const post_number = route("/post/*")?.split("/")[2];
     if(post_number){
