@@ -4,7 +4,11 @@
 <channel>
   <title>jordanreger</title>
   <link>https://jordanreger.com</link>
-  
+
+  <item>
+    <title>4</title>
+    <description>this is super thorough, and in my opinion, represents the future of the social web https://atproto.com/guides/overview</description>
+  </item>
   <item>
     <title>3</title>
     <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
