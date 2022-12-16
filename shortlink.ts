@@ -21,7 +21,7 @@ function handler(req: Request): Response {
     } else {
       return Response.redirect("https://jordanreger.com/posts.html", 302);
     }
-  } else if(path === "$") {
+  } else if(path === "/$") {
     return Response.redirect("https://cash.app/$jxreger", 302);
   } else {
     return Response.redirect(`https://jordanreger.com${path}.html`, 302);
