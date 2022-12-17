@@ -7,27 +7,62 @@ function handler(req: Request): Response {
 
   if(path === "/") {
     return Response.redirect("https://jordanreger.com", 302);
-  } else if(path === route("/p/*")) {
+  }
+
+  else if(path === route("/p/*")) {
     const post_number = route("/p/*")?.split("/")[2];
     if(post_number){
       return Response.redirect(`https://jordanreger.com/posts.html#${post_number}`, 302);
     } else {
       return Response.redirect("https://jordanreger.com/posts.html", 302);
     }
-  } else if(path === route("/post/*")) {
+  }
+  else if(path === route("/post/*")) {
     const post_number = route("/post/*")?.split("/")[2];
     if(post_number){
       return Response.redirect(`https://jordanreger.com/posts.html#${post_number}`, 302);
     } else {
       return Response.redirect("https://jordanreger.com/posts.html", 302);
     }
-  } else if(path === "/$") {
+  }
+
+  else if(path === "/$") {
     return Response.redirect("https://cash.app/$jxreger", 302);
-  } else if(path === "/mail") {
+  }
+
+  else if(path === "/mail" || path === "/email") {
     return Response.redirect("mailto:mail@jordanreger.com", 302);
-  } else if(path === "/gem") {
+  }
+
+  else if(path === "/gem" || path === "/gemini") {
     return Response.redirect("https://portal.mozz.us/gemini/jordanreger.com", 302);
-  } else {
+  }
+
+  else if(path === "/srht") {
+    return Response.redirect("https://sr.ht/~jordanreger", 302);
+  }
+
+  else if(path === "/github") {
+    return Response.redirect("https://github.com/jordanreger", 302);
+  }
+
+  else if(path === "/mastodon") {
+    return Response.redirect("https://indieweb.social/@jr", 302);
+  }
+
+  else if(path === "/twitter") {
+    return Response.redirect("https://twitter.com/jxreger", 302);
+  }
+
+  else if(path === "/yt" || path === "/youtube") {
+    return Response.redirect("https://youtube.com/@jordanreger", 302);
+  }
+
+  else if(path === "/linkedin" || path === "/in") {
+    return Response.redirect("https://linkedin.com/in/jordanreger", 302);
+  }
+
+  else {
     return Response.redirect(`https://jordanreger.com${path}.html`, 302);
   }
 }
