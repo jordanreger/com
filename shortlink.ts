@@ -23,6 +23,10 @@ function handler(req: Request): Response {
     }
   } else if(path === "/$") {
     return Response.redirect("https://cash.app/$jxreger", 302);
+  } else if(path === "/mail") {
+    return Response.redirect("mailto:mail@jordanreger.com", 302);
+  } else if(path === "/gem") {
+    return Response.redirect("https://portal.mozz.us/gemini/jordanreger.com", 302);
   } else {
     return Response.redirect(`https://jordanreger.com${path}.html`, 302);
   }
