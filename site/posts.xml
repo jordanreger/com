@@ -9,31 +9,37 @@
     <title>5</title>
     <description>shortlinks! (see below)</description>
     <pubDate>2022-12-15T15:58:00-05:00</pubDate>
+    <link>https://2jr.co/p/5</link>
   </item>
   <item>
     <title>4</title>
     <description>this is super thorough, and in my opinion, represents the future of the social web https://atproto.com/guides/overview</description>
     <pubDate>2022-12-14T19:06:00-05:00</pubDate>
+    <link>https://2jr.co/p/4</link>
   </item>
   <item>
     <title>3</title>
     <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
     <pubDate>2022-12-13T20:23:00-05:00</pubDate>
+    <link>https://2jr.co/p/3</link>
   </item>
   <item>
     <title>2</title>
     <description>it seems to be working fully... this is a test post https://jordanreger.com</description>
     <pubDate>2022-12-13T16:23:00-05:00</pubDate>
+    <link>https://2jr.co/p/2</link>
   </item>
   <item>
     <title>1</title>
     <description>posts like these are syndicated (https://indieweb.org/POSSE) via an xml file on my site. i like this quite a lot better than posting on separate platforms.</description>
     <pubDate>2022-12-13T15:27:00-05:00</pubDate>
+    <link>https://2jr.co/p/1</link>
   </item>
   <item>
     <title>0</title>
     <description>hello world!</description>
     <pubDate>2022-12-13T15:00:00-05:00</pubDate>
+    <link>https://2jr.co/p/0</link>
   </item>
 </channel>
 

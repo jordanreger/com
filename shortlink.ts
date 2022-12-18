@@ -30,6 +30,10 @@ function handler(req: Request): Response {
     return Response.redirect("https://cash.app/$jxreger", 302);
   }
 
+  else if(path === "/btc") {
+    return Response.redirect("https://cash.app/$jxreger/bitcoin/3woQzxopQL", 302);
+  }
+
   else if(path === "/mail" || path === "/email") {
     return Response.redirect("mailto:mail@jordanreger.com", 302);
   }
