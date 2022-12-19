@@ -46,7 +46,7 @@ function handler(req: Request): Response {
     return Response.redirect("https://github.com/jordanreger", 302);
   }
 
-  else if(path === "/mastodon") {
+  else if(path === "/mastodon" || path === "/@jr") {
     return Response.redirect("https://indieweb.social/@jr", 302);
   }
 
