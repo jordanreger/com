@@ -1,40 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-
-<channel>
-  <title>jordanreger</title>
-  <link>https://jordanreger.com</link>
-
-  <item>
-    <title>5</title>
-    <description>shortlinks! (see below)</description>
-    <pubDate>2022-12-15T15:58:00-05:00</pubDate>
-  </item>
-  <item>
-    <title>4</title>
-    <description>this is super thorough, and in my opinion, represents the future of the social web https://atproto.com/guides/overview</description>
-    <pubDate>2022-12-14T19:06:00-05:00</pubDate>
-  </item>
-  <item>
-    <title>3</title>
-    <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
-    <pubDate>2022-12-13T20:23:00-05:00</pubDate>
-  </item>
-  <item>
-    <title>2</title>
-    <description>it seems to be working fully... this is a test post https://jordanreger.com</description>
-    <pubDate>2022-12-13T16:23:00-05:00</pubDate>
-  </item>
-  <item>
-    <title>1</title>
-    <description>posts like these are syndicated (https://indieweb.org/POSSE) via an xml file on my site. i like this quite a lot better than posting on separate platforms.</description>
-    <pubDate>2022-12-13T15:27:00-05:00</pubDate>
-  </item>
-  <item>
-    <title>0</title>
-    <description>hello world!</description>
-    <pubDate>2022-12-13T15:00:00-05:00</pubDate>
-  </item>
-</channel>
-
+  <channel>
+    <item>
+      <title>6</title>
+      <link>https://2jr.co/p/6</link>
+      <guid>https://2jr.co/p/6</guid>
+      <description>social media platforms are falling apart. make your own site and post on there! make sure they can be followed via rss as well.</description>
+      <pubDate>2022-12-18T14:52:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>5</title>
+      <link>https://2jr.co/p/5</link>
+      <guid>https://2jr.co/p/5</guid>
+      <description>shortlinks! (see below)</description>
+      <pubDate>2022-12-15T15:58:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>4</title>
+      <link>https://2jr.co/p/4</link>
+      <guid>https://2jr.co/p/4</guid>
+      <description>this is super thorough, and in my opinion, represents the future of the social web https://atproto.com/guides/overview</description>
+      <pubDate>2022-12-14T19:06:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>3</title>
+      <link>https://2jr.co/p/3</link>
+      <guid>https://2jr.co/p/3</guid>
+      <description>testing out using my git changelog instead of checking length of the xml entries, because that didn't work.</description>
+      <pubDate>2022-12-13T20:23:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>2</title>
+      <link>https://2jr.co/p/2</link>
+      <guid>https://2jr.co/p/2</guid>
+      <description>it seems to be working fully... this is a test post https://jordanreger.com</description>
+      <pubDate>2022-12-13T16:23:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>1</title>
+      <link>https://2jr.co/p/1</link>
+      <guid>https://2jr.co/p/1</guid>
+      <description>posts like these are syndicated (https://indieweb.org/POSSE) via an xml file on my site. i like this quite a lot better than posting on separate platforms.</description>
+      <pubDate>2022-12-13T15:27:00-05:00</pubDate>
+    </item>
+    <item>
+      <title>0</title>
+      <link>https://2jr.co/p/0</link>
+      <guid>https://2jr.co/p/0</guid>
+      <description>hello world!</description>
+      <pubDate>2022-12-13T15:00:00-05:00</pubDate>
+    </item>
+  </channel>
 </rss>
