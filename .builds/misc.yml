@@ -21,6 +21,8 @@ tasks:
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
         deployctl deploy --project=posse-jordanreger ./posse.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./shortlink.ts --token=$DEPLOY_TOKEN --prod
+    - posse: |
+        curl https://posse.jordanreger.com/post
     - deploy-shortlink: |
         cd com
         set +x

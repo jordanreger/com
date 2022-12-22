@@ -25,5 +25,3 @@ tasks:
     acurl -f https://pages.sr.ht/publish/$site \
       -Fcontent=@./com/gemini.tar.gz \
       -Fprotocol=GEMINI
-- posse: |
-    curl https://posse.jordanreger.com/post
