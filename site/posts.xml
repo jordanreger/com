@@ -3,13 +3,15 @@
     <item>
       <title>7</title>
       <link>https://2jr.co/p/7</link>
-      <guid>https://2jr.co/p/7</link>
+      <guid>https://2jr.co/p/7</guid>
       <description>
         this is a test post
+        <br/>
         created to test newlines
+        <br/>
         in the language xml
       </description>
-      <pubDate>2022-12-22T22:45:00-05:00</pubDate>
+      <pubDate>2022-12-22T09:42:00-05:00</pubDate>
     </item>
     <item>
       <title>6</title>
