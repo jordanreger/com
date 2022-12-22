@@ -164,6 +164,7 @@ Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);
 async function get_post_feed() {
   const posts = Deno.readTextFileSync(`build${slash}posts.xml`);
   const feed = await parseFeed(posts);
+  console.log(feed);
   let post_feed = `<ul>`;
   feed.entries.forEach(post => {
     let post_description = post.description?.value;
