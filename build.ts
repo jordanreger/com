@@ -173,6 +173,7 @@ async function get_post_feed() {
         post_description = post_description?.replaceAll(link, `<a href="${link}">${link}</a>`)
       })
     }
+    post_description = post_description?.replaceAll("\r\n", "<br/>");
     post_feed = post_feed + `
     <li id="${post.title?.value}">
       ${post_description}
