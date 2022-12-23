@@ -113,9 +113,11 @@ getFiles(`site`).forEach(file => {
   if(!file.includes("robots.txt") && !file.includes("key") && !file.includes("posts.xml")) {
     let contents = Deno.readTextFileSync(file);
     file = file.replace(`site${slash}`, "");
-    contents = templating(contents, file);
-    file = `build${slash}` + file;
-    Deno.writeTextFileSync(file, contents);
+    const build_file = `build${slash}` + file;
+    if(file !== build_file) {
+      contents = templating(contents, file);
+      Deno.writeTextFileSync(build_file, contents);
+    }
   } else {
     const build_file = file.replace(`site${slash}`, `build${slash}`);
     Deno.copyFileSync(file, build_file);
@@ -125,14 +127,18 @@ getFiles(`site`).forEach(file => {
 try { Deno.readDirSync(`build${slash}links`) } catch(_) { Deno.mkdirSync(`build${slash}links`) }
 getFiles(`links`).forEach(file => {
   const build_file = file.replace(`links${slash}`, `build${slash}links${slash}`);
-  Deno.copyFileSync(file, build_file);
+  if(file !== build_file) {
+    Deno.copyFileSync(file, build_file);
+  }
 });
 
 try { Deno.readDirSync(`build${slash}resources`) } catch(_) { Deno.mkdirSync(`build${slash}resources`) }
 getFiles(`resources`).forEach(file => {
   if(!file.includes("fonts")) {
     const build_file = file.replace(`resources${slash}`, `build${slash}resources${slash}`);
-    Deno.copyFileSync(file, build_file);
+    if(file !== build_file) {
+      Deno.copyFileSync(file, build_file);
+    }
   }
 });
 
@@ -164,7 +170,6 @@ Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);
 async function get_post_feed() {
   const posts = Deno.readTextFileSync(`build${slash}posts.xml`);
   const feed = await parseFeed(posts);
-  console.log(feed);
   let post_feed = `<ul>`;
   feed.entries.forEach(post => {
     let post_description = post.description?.value;
