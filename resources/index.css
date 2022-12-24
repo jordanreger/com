@@ -50,7 +50,7 @@ td {
   color: #fff;
 }
 
-img:not(footer > .right > a > img) {
+img {
   user-select: none;
   max-height: 25rem;
 	max-width: 65%;
