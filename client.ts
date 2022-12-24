@@ -8,14 +8,28 @@ async function handler(req: Request): Promise<Response> {
   const path = url.pathname;
   const file = (fp:string) => { return Deno.readFile(fp) }
   const _file_extension = url.pathname.split("/")[url.pathname.split("/").length - 1].split(".")[1];
-  const _params = new URLSearchParams(url.searchParams);
+  const params = new URLSearchParams(url.searchParams);
 
   if(path === "/") {
     return new Response(await file("./client/index.html"), { headers: { "content-type": contentType("html") } });
   }
 
+  else if(path === "/auth") {
+    const code = params.get("code");
+    const auth = await fetch("https://indieauth.com/auth", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" }, body: JSON.stringify({ "code": code, "redirect_uri": "https://client.jordanreger.com/auth", "client_id": "https://client.jordanreger.com" }) })
+      .then(res => res.json())
+    
+    localStorage.setItem("domain", auth.me);
+    
+    return new Response(auth, { headers: { "content-type": contentType("txt") } });
+  }
+
   else if(path === "/app") {
-    return new Response(await file("./client/app.html"), { headers: { "content-type": contentType("html") } });
+    if(localStorage.getItem("domain") === "https://jordanreger.com") {
+      return new Response(await file("./client/app.html"), { headers: { "content-type": contentType("html") } });
+    } else {
+      return Response.redirect("/", 302);
+    }
   }
 
   else {
