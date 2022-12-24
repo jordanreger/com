@@ -20,7 +20,7 @@ tasks:
         set -x
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
-        deployctl deploy --project=posse-jordanreger ./posse.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./shortlink.ts --token=$DEPLOY_TOKEN --prod
+        deployctl deploy --project=posse-jordanreger ./posse.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./shortlink.ts,./client.ts,./client --token=$DEPLOY_TOKEN --prod
     - posse: |
         curl https://posse.jordanreger.com/post
     - deploy-shortlink: |
@@ -30,7 +30,15 @@ tasks:
         set -x
         DENO_INSTALL="/home/build/.deno"
         PATH="$DENO_INSTALL/bin:$PATH"
-        deployctl deploy --project=2jr ./shortlink.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./posse.ts --token=$DEPLOY_TOKEN --prod
+        deployctl deploy --project=2jr ./shortlink.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./posse.ts,./client.ts,./client --token=$DEPLOY_TOKEN --prod
+    - deploy-client: |
+        cd com
+        set +x
+        DEPLOY_TOKEN=$(cat ~/.deploy_key)
+        set -x
+        DENO_INSTALL="/home/build/.deno"
+        PATH="$DENO_INSTALL/bin:$PATH"
+        deployctl deploy --project=client-jordanreger ./client.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./posse.ts --token=$DEPLOY_TOKEN --prod
     - mirror-to-github: |
         cd com
         git remote add github git@github.com:jordanreger/com.git
