@@ -8,20 +8,20 @@ tasks:
 - install-deno: |
     curl -fsSL https://deno.land/x/install/install.sh | sh
 - build: |
-    cd com
+    cd wiki
     DENO_INSTALL="/home/build/.deno"
     PATH="$DENO_INSTALL/bin:$PATH"
     deno run -A build.ts
 - package-main: |
-    cd com/build
+    cd wiki/build
     tar -cvz . > ../site.tar.gz
 - upload-main: |
     acurl -f https://pages.sr.ht/publish/$site \
-      -Fcontent=@./com/site.tar.gz
+      -Fcontent=@./wiki/site.tar.gz
 - package-gemini: |
     cd com/gemini
     tar -cvz . > ../gemini.tar.gz
 - upload-gemini: |
     acurl -f https://pages.sr.ht/publish/$site \
-      -Fcontent=@./com/gemini.tar.gz \
+      -Fcontent=@./wiki/gemini.tar.gz \
       -Fprotocol=GEMINI
