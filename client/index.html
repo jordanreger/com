@@ -1,7 +1,18 @@
-<form action="https://indieauth.com/auth" method="get">
-  <label for="url">Web Address:</label>
-  <input id="url" type="text" name="me" placeholder="yourdomain.com" />
-  <p><button type="submit">Sign In</button></p>
-  <input type="hidden" name="client_id" value="https://client.jordanreger.com" />
-  <input type="hidden" name="redirect_uri" value="https://client.jordanreger.com/auth" />
-</form>
+<script>
+  const tokenType = localStorage.getItem("token_type");
+  const accessToken = localStorage.getItem("access_token");
+  fetch('https://discord.com/api/oauth2/@me', {
+    headers: {
+      authorization: `${tokenType} ${accessToken}`,
+    },
+  })
+    .then(res => res.json())
+    .then(res => {
+      if(res.code !== 0) {
+        window.location.replace("/app");
+      }
+    })
+    .catch(console.error);
+</script>
+
+<a href="https://discord.com/api/oauth2/authorize?client_id=1056402963775623179&redirect_uri=https%3A%2F%2Fclient.jordanreger.com%2Fauth&response_type=token&scope=identify">login</a>

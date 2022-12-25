@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.165.0/http/server.ts";
 import { contentType } from "https://deno.land/std@0.165.0/media_types/mod.ts";
-import { hash, verify } from "https://deno.land/x/argon2@v0.9.2/lib/mod.ts";
 
 async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
@@ -15,21 +14,11 @@ async function handler(req: Request): Promise<Response> {
   }
 
   else if(path === "/auth") {
-    const code = params.get("code");
-    const auth = await fetch("https://indieauth.com/auth", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" }, body: JSON.stringify({ "code": code, "redirect_uri": "https://client.jordanreger.com/auth", "client_id": "https://client.jordanreger.com" }) })
-      .then(res => res.json())
-    
-    localStorage.setItem("domain", auth.me);
-    
-    return new Response(auth, { headers: { "content-type": contentType("txt") } });
+    return new Response(await file("./client/auth.html"), { headers: { "content-type": contentType("html") } });
   }
 
   else if(path === "/app") {
-    if(localStorage.getItem("domain") === "https://jordanreger.com") {
-      return new Response(await file("./client/app.html"), { headers: { "content-type": contentType("html") } });
-    } else {
-      return Response.redirect("/", 302);
-    }
+    return new Response(await file("./client/app.html"), { headers: { "content-type": contentType("html") } });
   }
 
   else {
