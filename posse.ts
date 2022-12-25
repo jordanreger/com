@@ -29,7 +29,7 @@ async function get_latest_post() {
 
   if(git_log_feed.entries[0].title?.value === "posts: new post") {
     const response = await fetch(
-      "https://jordanreger.com/posts.xml",
+      "https://jordanreger.com/atom.xml",
     );
     const xml = await response.text();
     const feed = await parseFeed(xml);
@@ -43,7 +43,7 @@ https://2jr.co/p/${feed.entries[0].title?.value}`;
   } else {
     return false;
   }
-} 
+}
 
 /* server */
 function handler(req: Request): Response {
@@ -54,7 +54,7 @@ function handler(req: Request): Response {
   }
   else if(path === "/post") {
     get_latest_post();
-    return Response.redirect('https://jordanreger.com/posts.html', 302);
+    return Response.redirect('https://jordanreger.com/posts', 302);
   } else {
     return new Response("404", { headers: { "content-type": "text/html; charset=utf-8" } });
   }

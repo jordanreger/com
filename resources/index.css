@@ -12,6 +12,18 @@ br {
   user-select: none;
 }
 
+button {
+  background-color: transparent;
+  border: 1px solid #999;
+  color: #e0e0e0;
+  font-family: Roboto;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #424242;
+}
+
 pre {
   padding: 1rem 1rem;
   border: 1px solid #fff;

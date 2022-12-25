@@ -1,7 +1,7 @@
 image: ubuntu/20.04
 oauth: pages.sr.ht/PAGES:RW
 environment:
-    site: jordanreger.com
+    site: wiki.jordanreger.com
 packages:
     - unzip
 tasks:
