@@ -165,7 +165,7 @@ hierarchy = hierarchy + "└" + "──┴".repeat(longest_str[0] - 1) + "──
 const sitemap = Deno.readTextFileSync(`build${slash}sitemap.html`);
 const sitemap_contents = sitemap.replace("{ sitemap }", hierarchy);
 Deno.writeTextFileSync(`build${slash}sitemap.html`, sitemap_contents);
-
+/*
 // posts
 async function get_post_feed() {
   const posts = Deno.readTextFileSync(`build${slash}posts.xml`);
@@ -196,3 +196,4 @@ async function get_post_feed() {
 const post = Deno.readTextFileSync(`build${slash}posts.html`);
 const post_contents = post.replace("{ posts }", await get_post_feed());
 Deno.writeTextFileSync(`build${slash}posts.html`, post_contents);
+*/

@@ -2,7 +2,7 @@ image: ubuntu/20.04
 packages:
     - unzip
 sources:
-    - https://git.sr.ht/~jordanreger/com
+    - https://git.sr.ht/~jordanreger/wiki
 secrets:
     - 40905730-8922-46ad-8f53-dc416722a53f # deploy key
     - c7771c68-4b15-43a2-945b-a544bd48c3a6 # github push
