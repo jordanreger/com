@@ -19,7 +19,7 @@ tasks:
     acurl -f https://pages.sr.ht/publish/$site \
       -Fcontent=@./wiki/site.tar.gz
 - package-gemini: |
-    cd com/gemini
+    cd wiki/gemini
     tar -cvz . > ../gemini.tar.gz
 - upload-gemini: |
     acurl -f https://pages.sr.ht/publish/$site \

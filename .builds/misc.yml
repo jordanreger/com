@@ -33,6 +33,6 @@ tasks:
         deployctl deploy --project=2jr ./shortlink.ts --no-static --exclude=./site,./resources,./links,./gemini,./.builds,./.gitignore,./build.ts,./LICENSE,./README.md,./run.ts,./posse.ts,./client.ts,./client --token=$DEPLOY_TOKEN --prod
     - mirror-to-github: |
         cd wiki
-        git remote add github git@github.com:jordanreger/com.git
+        git remote add github git@github.com:jordanreger/wiki.git
         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         git push github main
